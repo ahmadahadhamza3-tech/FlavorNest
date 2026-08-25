@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FlavorNest - beautiful and easy cooking recipes.">
+  <title>FlavorNest — Delicious Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a class="brand" href="#home"><span>F</span> FlavorNest</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-actions">
+      <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">GOOD FOOD • GOOD MOOD</div>
+      <h1>Cook something<br><em>delicious</em> today.</h1>
+      <p>Easy, flavorful recipes made for busy days, family dinners and every little craving.</p>
+      <div class="hero-search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search biryani, pasta, cake..." autocomplete="off">
+        <button id="searchBtn">Find Recipe</button>
+      </div>
+      <div class="quick-tags">
+        <span>Popular:</span>
+        <button data-search="Biryani">Biryani</button>
+        <button data-search="Chicken">Chicken</button>
+        <button data-search="Pasta">Pasta</button>
+        <button data-search="Dessert">Dessert</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Beautiful food table">
+        <div class="floating-card">
+          <div class="mini-avatar">👩‍🍳</div>
+          <div><strong>Today's pick</strong><small>Spicy Chicken Biryani</small></div>
+          <span class="heart">♥</span>
+        </div>
+      </div>
+      <div class="hero-sticker">100+<small>easy recipes</small></div>
+    </div>
+  </section>
+
+  <section class="categories section" id="categories">
+    <div class="section-head">
+      <div><span class="eyebrow">EXPLORE</span><h2>What are you craving?</h2></div>
+    </div>
+    <div class="category-grid">
+      <button class="category" data-category="Pakistani"><span>🍛</span><strong>Pakistani</strong><small>Desi favorites</small></button>
+      <button class="category" data-category="Chicken"><span>🍗</span><strong>Chicken</strong><small>Juicy & spicy</small></button>
+      <button class="category" data-category="Fast Food"><span>🍔</span><strong>Fast Food</strong><small>Quick bites</small></button>
+      <button class="category" data-category="Dessert"><span>🍰</span><strong>Desserts</strong><small>Sweet treats</small></button>
+      <button class="category" data-category="Healthy"><span>🥗</span><strong>Healthy</strong><small>Fresh choices</small></button>
+      <button class="category" data-category="Breakfast"><span>🥞</span><strong>Breakfast</strong><small>Start right</small></button>
+    </div>
+  </section>
+
+  <section class="section" id="recipes">
+    <div class="section-head row">
+      <div><span class="eyebrow">OUR FAVORITES</span><h2>Popular recipes</h2></div>
+      <button class="text-btn" id="clearFilter">View all recipes →</button>
+    </div>
+    <div class="recipe-grid" id="recipeGrid"></div>
+  </section>
+
+  <section class="featured section">
+    <div class="featured-photo">
+      <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=85" alt="Chicken biryani">
+      <span class="photo-label">RECIPE OF THE DAY</span>
+    </div>
+    <div class="featured-copy">
+      <span class="eyebrow">CHEF'S CHOICE</span>
+      <h2>Spicy Chicken Biryani</h2>
+      <p>Fragrant basmati rice, tender chicken and bold Pakistani spices layered together for the ultimate comfort meal.</p>
+      <div class="stats"><span>★ 4.9</span><span>⏱ 60 min</span><span>🔥 Medium</span></div>
+      <button class="primary" onclick="openRecipe(1)">See full recipe</button>
+    </div>
+  </section>
+
+  <section class="newsletter section">
+    <div><span class="eyebrow">WEEKLY INSPIRATION</span><h2>Fresh recipes, straight to your inbox.</h2><p>No spam. Just delicious ideas.</p></div>
+    <form id="newsletterForm"><input id="emailInput" type="email" placeholder="Your email address" required><button>Subscribe</button></form>
+  </section>
+
+  <section class="about section" id="about">
+    <div><span class="eyebrow">ABOUT FLAVORNEST</span><h2>Simple recipes.<br>Big flavors.</h2></div>
+    <div><p>FlavorNest is a clean, beginner-friendly recipe space for people who want great food without complicated instructions.</p><p>Save favorites, search by craving and open any recipe for ingredients and step-by-step instructions.</p></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a class="brand" href="#home"><span>F</span> FlavorNest</a>
+    <p>Made for people who love to cook. ♥</p>
+    <div><a href="#home">Home</a><a href="#recipes">Recipes</a><a href="#categories">Categories</a><a href="#about">About</a></div>
+  </div>
+  <small>© 2026 FlavorNest. All rights reserved.</small>
+</footer>
+
+<div class="modal" id="recipeModal" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
