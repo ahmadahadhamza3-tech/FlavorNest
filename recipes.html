@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>All Recipes | FlavorNest</title>
+  <meta name="description" content="Explore delicious and easy recipes on FlavorNest.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #fffaf6;
+      color: #171717;
+    }
+
+    header {
+      height: 100px;
+      border-bottom: 1px solid #eadfd7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8%;
+      background: #fffaf6;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #171717;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: #f15b32;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #272727;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f15b32;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 45px;
+    }
+
+    .small-title {
+      color: #f15b32;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 68px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #716962;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .search-box {
+      max-width: 650px;
+      margin: 35px auto 0;
+      display: flex;
+      background: white;
+      border: 1px solid #e4d9d1;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(60, 35, 20, 0.06);
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 17px 20px;
+      font-size: 16px;
+      font-family: inherit;
+    }
+
+    .search-box button {
+      border: none;
+      background: #f15b32;
+      color: white;
+      padding: 0 28px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .categories {
+      max-width: 1100px;
+      margin: 10px auto 45px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category {
+      border: 1px solid #dfd3ca;
+      background: white;
+      padding: 10px 19px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .category:hover,
+    .category.active {
+      background: #f15b32;
+      color: white;
+      border-color: #f15b32;
+    }
+
+    .recipes {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px 80px;
+    }
+
+    .recipes-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .recipes-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+    }
+
+    .count {
+      color: #777;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #eadfd7;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(50, 30, 20, 0.10);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #766f69;
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 45px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .view-btn {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #fff0e8;
+      color: #f15b32;
+      padding: 13px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .view-btn:hover {
+      background: #f15b32;
+      color: white;
+    }
+
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 50px;
+      color: #777;
+      grid-column: 1 / -1;
+    }
+
+    footer {
+      border-top: 1px solid #eadfd7;
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      background: white;
+    }
+
+    @media (max-width: 850px) {
+      .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header {
+        padding: 0 5%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav {
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .recipe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .recipes-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .search-box button {
+        padding: 0 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <span class="logo-icon">F</span>
+    FlavorNest
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="small-title">FLAVORNEST COLLECTION</div>
+
+  <h1>All Recipes</h1>
+
+  <p>
+    Discover delicious recipes, from classic Pakistani favorites
+    to burgers, desserts, pasta and more.
+  </p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search for a recipe..."
+    >
+    <button onclick="searchRecipes()">Search</button>
+  </div>
+</section>
+
+<div class="categories">
+  <button class="category active" onclick="filterRecipes('all', this)">All</button>
+  <button class="category" onclick="filterRecipes('pakistani', this)">Pakistani</button>
+  <button class="category" onclick="filterRecipes('chicken', this)">Chicken</button>
+  <button class="category" onclick="filterRecipes('fastfood', this)">Fast Food</button>
+  <button class="category" onclick="filterRecipes('dessert', this)">Desserts</button>
+  <button class="category" onclick="filterRecipes('pasta', this)">Pasta</button>
+</div>
+
+<section class="recipes">
+
+  <div class="recipes-heading">
+    <h2>Explore Recipes</h2>
+    <span class="count" id="recipeCount">9 recipes</span>
+  </div>
+
+  <div class="recipe-grid" id="recipeGrid">
+
+    <article class="card" data-category="pakistani chicken">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=80"
+        alt="Chicken Biryani"
+      >
+
+      <div class="card-content">
+        <h3>Spicy Chicken Biryani</h3>
+        <p>Fragrant basmati rice with tender chicken and bold Pakistani spices.</p>
+
+        <div class="info">
+          <span>⏱ 60 min</span>
+          <span>★ 4.9</span>
+          <span>Medium</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="pakistani chicken">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
+        alt="Chicken Karahi"
+      >
+
+      <div class="card-content">
+        <h3>Chicken Karahi</h3>
+        <p>A rich and spicy tomato chicken curry made in classic karahi style.</p>
+
+        <div class="info">
+          <span>⏱ 45 min</span>
+          <span>★ 4.8</span>
+          <span>Easy</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="fastfood">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+        alt="Cheeseburger"
+      >
+
+      <div class="card-content">
+        <h3>Classic Cheeseburger</h3>
+        <p>Juicy homemade burger with melted cheese and fresh vegetables.</p>
+
+        <div class="info">
+          <span>⏱ 25 min</span>
+          <span>★ 4.7</span>
+          <span>Easy</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="dessert">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+        alt="Chocolate Cake"
+      >
+
+      <div class="card-content">
+        <h3>Chocolate Cake</h3>
+        <p>Soft, rich chocolate cake perfect for birthdays and celebrations.</p>
+
+        <div class="info">
+          <span>⏱ 50 min</span>
+          <span>★ 4.9</span>
+          <span>Medium</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="pasta">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80"
+        alt="Creamy Pasta"
+      >
+
+      <div class="card-content">
+        <h3>Creamy Garlic Pasta</h3>
+        <p>Creamy and delicious pasta with garlic, herbs and parmesan.</p>
+
+        <div class="info">
+          <span>⏱ 30 min</span>
+          <span>★ 4.8</span>
+          <span>Easy</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="chicken">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=80"
+        alt="Grilled Chicken"
+      >
+
+      <div class="card-content">
+        <h3>Grilled Chicken</h3>
+        <p>Juicy grilled chicken marinated with herbs and flavorful spices.</p>
+
+        <div class="info">
+          <span>⏱ 35 min</span>
+          <span>★ 4.7</span>
+          <span>Easy</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="dessert">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80"
+        alt="Donuts"
+      >
+
+      <div class="card-content">
+        <h3>Chocolate Donuts</h3>
+        <p>Soft homemade donuts covered with delicious chocolate glaze.</p>
+
+        <div class="info">
+          <span>⏱ 35 min</span>
+          <span>★ 4.8</span>
+          <span>Medium</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="fastfood chicken">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80"
+        alt="Fried Chicken"
+      >
+
+      <div class="card-content">
+        <h3>Crispy Fried Chicken</h3>
+        <p>Crunchy golden fried chicken with a juicy and flavorful center.</p>
+
+        <div class="info">
+          <span>⏱ 40 min</span>
+          <span>★ 4.9</span>
+          <span>Medium</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="pakistani">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80"
+        alt="Pakistani Curry"
+      >
+
+      <div class="card-content">
+        <h3>Traditional Curry</h3>
+        <p>A comforting Pakistani curry packed with aromatic spices.</p>
+
+        <div class="info">
+          <span>⏱ 45 min</span>
+          <span>★ 4.8</span>
+          <span>Medium</span>
+        </div>
+
+        <a href="#" class="view-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <div class="no-results" id="noResults">
+      <h3>No recipes found</h3>
+      <p>Try searching for something else.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 FlavorNest. All rights reserved.</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+  const searchInput = document.getElementById("searchInput");
+  const recipeCount = document.getElementById("recipeCount");
+  const noResults = document.getElementById("noResults");
+
+  function filterRecipes(category, button) {
+    document.querySelectorAll(".category").forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    let visible = 0;
+
+    cards.forEach(card => {
+      const cardCategory = card.dataset.category;
+
+      if (category === "all" || cardCategory.includes(category)) {
+        card.style.display = "block";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    recipeCount.textContent = visible + (visible === 1 ? " recipe" : " recipes");
+    noResults.style.display = visible === 0 ? "block" : "none";
+  }
+
+  function searchRecipes() {
+    const search = searchInput.value.toLowerCase().trim();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const title = card.querySelector("h3").textContent.toLowerCase();
+      const description = card.querySelector("p").textContent.toLowerCase();
+
+      if (title.includes(search) || description.includes(search)) {
+        card.style.display = "block";
+        visible++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    recipeCount.textContent = visible + (visible === 1 ? " recipe" : " recipes");
+    noResults.style.display = visible === 0 ? "block" : "none";
+  }
+
+  searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      searchRecipes();
+    }
+  });
+</script>
+
+</body>
+</html>
