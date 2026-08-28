@@ -6,62 +6,359 @@ const recipes=[
 {id:5,name:"Fresh Green Salad",category:"Healthy",time:"10 min",difficulty:"Easy",rating:"4.6",image:"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85",description:"Crisp vegetables with lemon for a fresh and healthy side.",ingredients:["Cucumber — 1","Tomatoes — 2","Lettuce","Onion — 1","Lemon juice — 1 tbsp","Salt — to taste"],steps:["Wash all vegetables.","Chop cucumber, tomatoes and onion.","Add lettuce.","Season with lemon juice and salt.","Toss and serve fresh."]},
 {id:6,name:"Fluffy Pancakes",category:"Breakfast",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=900&q=85",description:"Soft, fluffy pancakes made for a perfect breakfast.",ingredients:["Flour — 1 cup","Milk — 1 cup","Egg — 1","Sugar — 2 tbsp","Baking powder — 1 tsp","Butter — 2 tbsp"],steps:["Mix flour, sugar and baking powder.","Add milk and egg; whisk until smooth.","Heat a pan with butter.","Pour batter and cook both sides until golden.","Serve with honey or syrup."]},
 {id:7,name:"Creamy Garlic Pasta",category:"Fast Food",time:"30 min",difficulty:"Easy",rating:"4.7",image:"https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85",description:"Creamy garlic pasta with cheese for a quick comfort dinner.",ingredients:["Pasta — 250g","Cream — 1 cup","Cheese — ½ cup","Garlic — 2 cloves","Butter — 1 tbsp","Black pepper"],steps:["Boil pasta until tender.","Melt butter and sauté garlic.","Add cream and black pepper.","Stir in cheese.","Add pasta and toss until coated.","Serve immediately."]},
-{id:8,name:"Chicken Tikka",category:"Chicken",time:"40 min",difficulty:"Medium",rating:"4.8",image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85",description:"Smoky, spicy grilled chicken with a delicious charred finish.",ingredients:["Chicken pieces — 500g","Yogurt — ½ cup","Tikka masala — 2 tbsp","Lemon juice — 2 tbsp","Ginger garlic paste — 1 tbsp","Oil — 2 tbsp"],steps:["Mix yogurt, tikka masala, lemon and ginger garlic.","Marinate chicken for at least 30 minutes.","Thread onto skewers.","Grill until cooked and lightly charred.","Brush with butter or oil and serve hot."]}
+{id:8,name:"Chicken Tikka",category:"Chicken",time:"40 min",difficulty:"Medium",rating:"4.8",image:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85",description:"Smoky, spicy grilled chicken with a delicious charred finish.",ingredients:["Chicken pieces — 500g","Yogurt — ½ cup","Tikka masala — 2 tbsp","Lemon juice — 2 tbsp","Ginger garlic paste — 1 tbsp","Oil — 2 tbsp"],steps:["Mix yogurt, tikka masala, lemon and ginger garlic.","Marinate chicken for at least 30 minutes.","Thread onto skewers.","Grill until cooked and lightly charred.","Brush with butter or oil and serve hot."]},
+{id:9,name:"Lahori Chana Chaat",category:"Pakistani",time:"15 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85",description:"Tangy, spicy chickpea street-food salad with potatoes, tamarind and onion.",ingredients:["Boiled chickpeas — 2 cups","Boiled potatoes — 2 diced","Onion — 1 finely chopped","Tomato — 1 chopped","Green chili — 2","Tamarind chutney — 3 tbsp","Chaat masala — 1 tsp"],steps:["Combine boiled chickpeas and diced potatoes in a mixing bowl.","Add chopped onions, tomatoes, and fresh green chilies.","Drizzle tangy tamarind chutney and sprinkle chaat masala.","Toss everything together and garnish with fresh coriander."]},
+{id:10,name:"Crispy Fried Chicken",category:"Fast Food",time:"35 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=85",description:"Golden extra-crispy fried chicken wings and drumsticks seasoned to perfection.",ingredients:["Chicken pieces — 600g","All-purpose flour — 1½ cups","Cornstarch — 2 tbsp","Buttermilk — 1 cup","Garlic powder — 1 tsp","Paprika — 1 tsp","Oil for deep frying"],steps:["Marinate chicken in spiced buttermilk for 1 hour.","Mix flour, cornstarch, paprika, garlic powder, salt, and pepper in a shallow bowl.","Dredge chicken pieces thoroughly in the flour mix.","Heat oil to 175°C (350°F) and fry chicken until deeply golden and cooked through (12–14 min).","Drain on a wire rack and serve piping hot."]},
+{id:11,name:"Gulab Jamun",category:"Dessert",time:"35 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=900&q=85",description:"Melt-in-mouth milk dough balls soaked in fragrant rose and cardamom syrup.",ingredients:["Milk powder — 1 cup","All-purpose flour — 2 tbsp","Ghee — 1 tbsp","Milk — 3-4 tbsp","Sugar — 1½ cups","Cardamom pods — 3","Rose water — 1 tsp","Oil or Ghee for frying"],steps:["Make sugar syrup by boiling sugar, water, cracked cardamom, and rose water for 5 minutes.","Mix milk powder, flour, ghee, and milk to form a soft dough.","Shape into small smooth balls without any cracks.","Fry on low heat until evenly golden-brown.","Transfer immediately into warm syrup and let soak for at least 30 minutes."]},
+{id:12,name:"Avocado Toast with Poached Egg",category:"Breakfast",time:"12 min",difficulty:"Easy",rating:"4.7",image:"https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=85",description:"Artisan sourdough toast topped with mashed seasoned avocado and a runny poached egg.",ingredients:["Sourdough bread — 2 slices","Ripe avocado — 1","Eggs — 2","Lemon juice — 1 tsp","Red chili flakes — ½ tsp","Sea salt & black pepper — to taste","Olive oil — 1 tsp"],steps:["Toast sourdough slices until golden and crisp.","Mash ripe avocado with lemon juice, salt, pepper, and olive oil.","Poach eggs in simmering water for 3 minutes until whites are set and yolks are runny.","Spread mashed avocado generously over warm toast.","Top with poached eggs, chili flakes, and serve immediately."]},
+{id:13,name:"Mutton Nihari",category:"Pakistani",time:"90 min",difficulty:"Hard",rating:"5.0",image:"https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=900&q=85",description:"Slow-cooked royal Pakistani stew with melt-in-mouth tender meat and aromatic gravy.",ingredients:["Mutton shank or beef — 750g","Nihari masala blend — 3 tbsp","Wheat flour — 3 tbsp dissolved in water","Ginger julienne — 2 tbsp","Green chilies — 3","Fried onions — ½ cup","Oil / Ghee — ½ cup"],steps:["Heat ghee in a heavy pot and sear the meat pieces.","Add Nihari spice blend and sauté until fragrant.","Pour water, cover tightly, and simmer on low heat for 1.5 to 2 hours until the meat is ultra-tender.","Stir in the dissolved wheat flour mixture slowly to thicken the gravy.","Simmer for 10 more minutes until oil rises to top (tarka).","Garnish with julienned ginger, green chilies, lemon wedges, and serve with naan."]},
+{id:14,name:"Mediterranean Quinoa Bowl",category:"Healthy",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85",description:"Nutrient-packed bowl with fluffy quinoa, chickpeas, olives, cherry tomatoes and feta.",ingredients:["Cooked quinoa — 2 cups","Cherry tomatoes — 1 cup halved","Kalamata olives — ½ cup","Cucumber — 1 diced","Feta cheese — ½ cup crumbled","Olive oil — 2 tbsp","Lemon juice — 1 tbsp","Dried oregano — ½ tsp"],steps:["Cook quinoa according to package instructions and let cool slightly.","In a large bowl, arrange quinoa, halved cherry tomatoes, diced cucumber, and olives.","Whisk olive oil, lemon juice, salt, pepper, and oregano for the dressing.","Drizzle dressing over the bowl and top with crumbled feta cheese.","Enjoy fresh for lunch or dinner."]},
+{id:15,name:"Strawberry Glazed Donuts",category:"Dessert",time:"40 min",difficulty:"Medium",rating:"4.8",image:"https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85",description:"Soft, airy yeast donuts dipped in vibrant strawberry icing and sprinkles.",ingredients:["Flour — 2 cups","Yeast — 1 tsp","Sugar — 3 tbsp","Warm milk — ¾ cup","Butter — 3 tbsp","Powdered sugar — 1 cup","Strawberry puree — 2 tbsp"],steps:["Prepare dough with flour, yeast, warm milk, sugar, and butter. Let rise for 1 hour.","Roll out dough and cut into donut rings.","Deep fry in warm oil until golden on both sides.","Whisk powdered sugar with strawberry puree to make the glaze.","Dip warm donuts into glaze, add sprinkles, and let set."]},
+{id:16,name:"Shakshuka (Eggs in Tomato Sauce)",category:"Breakfast",time:"25 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=900&q=85",description:"Poached eggs simmering in a rich spiced sauce of tomatoes, bell peppers, and cumin.",ingredients:["Eggs — 4","Crushed tomatoes — 400g","Bell pepper — 1 chopped","Onion — 1 diced","Garlic — 2 cloves","Cumin & Paprika — 1 tsp each","Fresh parsley & feta"],steps:["Sauté onions, garlic, and bell peppers in olive oil until soft.","Add crushed tomatoes, cumin, paprika, salt, and black pepper. Simmer for 10 minutes.","Use a spoon to create small wells in the sauce and crack an egg into each well.","Cover and cook on low heat for 5-8 minutes until egg whites are set but yolks remain soft.","Garnish with parsley and feta, serve with warm crusty bread."]},
+{id:17,name:"Loaded Cheesy Beef Nachos",category:"Fast Food",time:"20 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=900&q=85",description:"Crispy corn tortilla chips piled high with seasoned beef, melted cheddar, jalapeños, and guacamole.",ingredients:["Tortilla chips — 1 large bag","Ground beef — 300g seasoned with taco spices","Cheddar cheese — 2 cups shredded","Pickled jalapeños — ¼ cup","Pico de gallo salsa — ½ cup","Guacamole — ½ cup","Sour cream — 3 tbsp"],steps:["Preheat oven to 200°C (400°F).","Brown ground beef with taco seasoning in a skillet until fully cooked.","Arrange tortilla chips on a large baking sheet in an even layer.","Top with seasoned beef, black beans, jalapeño slices, and shredded cheddar cheese.","Bake for 8-10 minutes until cheese is bubbly and melted.","Top with fresh salsa, dollops of guacamole, sour cream, and serve immediately."]},
+{id:18,name:"Crispy French Fries & Secret Sauce",category:"Fast Food",time:"25 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=85",description:"Double-fried golden shoestring potatoes seasoned with sea salt and smoked paprika served with tangy dip.",ingredients:["Russet potatoes — 4 large","Vegetable oil — for deep frying","Sea salt — 1 tsp","Smoked paprika — ½ tsp","Garlic powder — ½ tsp","Mayonnaise — 3 tbsp","Ketchup — 2 tbsp","Sweet pickle relish — 1 tbsp"],steps:["Peel and cut potatoes into uniform thin fries (¼ inch).","Soak cut fries in ice-cold water for 30 minutes to remove excess starch, then pat completely dry.","Heat frying oil to 160°C (320°F) and fry potatoes for 4-5 minutes until soft but pale. Remove and drain.","Increase oil temperature to 190°C (375°F) and fry again for 3-4 minutes until deeply golden and extra crispy.","Toss hot fries in a bowl with sea salt, garlic powder, and smoked paprika.","Whisk mayo, ketchup, relish, and pepper to make the signature burger sauce."]},
+{id:19,name:"Cheesy Pepperoni Pizza",category:"Fast Food",time:"30 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=900&q=85",description:"Crispy crust pizza baked with rich herb tomato marinara, melted mozzarella, and spicy beef pepperoni slices.",ingredients:["Pizza dough — 1 ball (300g)","Pizza tomato sauce — ½ cup","Shredded mozzarella — 1½ cups","Pepperoni slices — 20 pieces","Olive oil — 1 tbsp","Dried oregano & basil — 1 tsp","Grated parmesan — 2 tbsp"],steps:["Preheat oven with pizza stone or baking tray to highest setting (240°C / 475°F).","Stretch pizza dough on a lightly floured surface into a 12-inch round circle.","Spread seasoned tomato pizza sauce evenly, leaving a ½ inch crust border.","Sprinkle generous layer of mozzarella cheese and arrange pepperoni slices on top.","Brush crust edges lightly with olive oil and sprinkle dried oregano.","Bake for 10-12 minutes until crust is blistered golden and cheese is bubbling with toasted spots.","Slice into wedges and enjoy hot."]},
+{id:20,name:"Crispy Mozzarella Cheese Sticks",category:"Fast Food",time:"20 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1531749668029-2db88e4276c7?auto=format&fit=crop&w=900&q=85",description:"Golden Italian-herb crusted mozzarella sticks with irresistible stretchy cheese pulls and marinara.",ingredients:["Mozzarella string cheese sticks — 8 sticks cut in half","All-purpose flour — ½ cup","Eggs — 2 beaten","Italian breadcrumbs — 1 cup","Garlic powder & oregano — 1 tsp each","Cooking oil for frying","Warm marinara sauce for dipping"],steps:["Unwrap mozzarella sticks and freeze for 20 minutes so they hold shape when frying.","Set up breading station: bowl 1 flour, bowl 2 beaten eggs, bowl 3 breadcrumbs mixed with garlic powder and oregano.","Dredge each cheese stick in flour, dip in egg, then coat thoroughly with breadcrumbs. (Repeat egg & crumb for double crispiness!).","Heat oil in deep pan to 180°C (350°F).","Fry 4-5 sticks at a time for 60-90 seconds until golden brown. Drain quickly.","Serve immediately with warm marinara sauce."]},
+{id:21,name:"BBQ Chicken Quesadilla",category:"Fast Food",time:"18 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1618040996337-56904b7850b9?auto=format&fit=crop&w=900&q=85",description:"Crispy toasted flour tortilla filled with smoky BBQ pulled chicken, sweet corn, and melted Monterey Jack.",ingredients:["Flour tortillas — 2 large (10-inch)","Cooked shredded chicken — 1½ cups","Sweet smoky BBQ sauce — 3 tbsp","Cheddar or Monterey Jack cheese — 1½ cups shredded","Sweet corn kernels — ¼ cup","Red onion — 2 tbsp finely diced","Fresh cilantro — chopped","Butter — 1 tbsp"],steps:["Toss shredded chicken with BBQ sauce, diced red onion, and sweet corn in a bowl.","Heat a large flat skillet over medium heat and melt a dab of butter.","Place one flour tortilla in the pan. Sprinkle half the cheese across one side.","Layer the BBQ chicken filling evenly over the cheese, add remaining cheese, and fold tortilla over into a half-moon.","Cook for 3-4 minutes per side pressing gently with a spatula until golden brown and cheese is completely melted.","Cut into 3 wedges and serve with sour cream or salsa."]},
+{id:22,name:"Zinger Crunch Chicken Burger",category:"Fast Food",time:"30 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=900&q=85",description:"Super crunchy buttermilk battered chicken breast with spicy secret mayo, cheddar, and crisp lettuce on toasted brioche.",ingredients:["Chicken breast fillets — 2","Brioche burger buns — 2","Buttermilk — 1 cup + 1 egg","Flour + cornstarch blend — 1½ cups","Spicy seasoning (paprika, cayenne, garlic, salt) — 2 tbsp","Spicy mayonnaise — 3 tbsp","Pickle chips — 6 slices","Crisp iceberg lettuce"],steps:["Pound chicken breasts to even ½-inch thickness and marinate in spiced buttermilk for 30 minutes.","Whisk flour, cornstarch, cayenne, paprika, garlic powder, and salt. Drizzle 2 tbsp buttermilk into flour to create crunchy flakes.","Dredge chicken into flour mix, dip back into buttermilk, then press firmly into flour mix.","Deep fry at 175°C (350°F) for 6-7 minutes until ultra-crispy, golden, and cooked through (internal 74°C / 165°F).","Toast brioche buns in butter until golden.","Spread spicy mayo on both buns, layer crunchy lettuce, pickles, and the sizzling hot crunchy chicken fillet."]},
+{id:23,name:"Loaded Chili Cheese Dogs",category:"Fast Food",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=900&q=85",description:"Grilled beef frankfurters nestled in warm bakery buns smothered in hearty chili con carne and warm cheddar cheese sauce.",ingredients:["Jumbo beef hot dogs / franks — 4","Bakery hot dog buns — 4","Hearty beef chili — 1½ cups warmed","Warm cheddar cheese sauce — 1 cup","Red onion — ¼ cup finely diced","Pickled jalapeño slices — 2 tbsp","Yellow mustard — 2 tbsp"],steps:["Preheat a grill pan or cast-iron skillet over medium-high heat.","Lightly score hot dogs with shallow diagonal cuts and grill for 5-6 minutes, turning often until nicely charred and juicy.","Lightly toast the hot dog buns on the grill.","Nestle each hot dog into a warm bun.","Ladle warm beef chili generously over each frank.","Drizzle creamy warm cheddar cheese sauce, drizzle yellow mustard, and garnish with diced red onions and jalapeños."]},
+{id:24,name:"Buffalo Hot Chicken Wings & Ranch",category:"Fast Food",time:"35 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=900&q=85",description:"Crispy restaurant-style chicken wings drenched in buttery cayenne pepper sauce served with cool ranch and crisp celery.",ingredients:["Chicken wings & drumettes — 800g","Baking powder — 1 tbsp (for extra crispness)","Garlic powder & salt — 1 tsp each","Cayenne hot sauce (Frank's style) — ½ cup","Melted unsalted butter — 4 tbsp","Honey or brown sugar — 1 tsp","Buttermilk ranch dressing & celery sticks"],steps:["Pat chicken wings completely dry with paper towels. Toss with baking powder, garlic powder, and salt.","Bake on a wire rack at 220°C (425°F) for 40 minutes (or deep fry at 185°C for 10-12 minutes) until blistered and ultra-crispy.","In a saucepan, melt butter and whisk in hot cayenne sauce, honey, and a dash of Worcestershire sauce until smooth.","Transfer piping hot wings to a large metal bowl, pour warm buffalo sauce over them, and toss vigorously to coat every wing.","Serve immediately with cold buttermilk ranch dip and fresh celery sticks."]},
+{id:25,name:"Royal Beef Seekh Kabab",category:"Pakistani",time:"35 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85",description:"Juicy spiced minced beef skewers charcoal-grilled with aromatic herbs and garam masala.",ingredients:["Minced beef (20% fat) — 600g","Finely chopped onion — 1 (squeezed dry)","Ginger garlic paste — 1½ tbsp","Green chilies — 3 finely minced","Gram flour (roasted besan) — 2 tbsp","Coriander & Cumin powder — 1 tbsp each","Garam masala — 1 tsp","Fresh mint & cilantro — ½ cup chopped"],steps:["Combine minced beef, squeezed onion, ginger garlic, green chilies, herbs, and roasted gram flour in a bowl.","Knead mixture firmly with your hands for 8-10 minutes until sticky and uniform.","Chill in refrigerator for 30 minutes.","Mold seasoned beef around flat metal skewers into cylindrical kababs.","Grill over hot coals or cook in a hot cast iron grill pan with butter for 8-10 minutes, turning regularly.","Smoke with a live charcoal and a drop of ghee for 2 minutes for authentic BBQ aroma.","Serve hot with mint chutney, ring onions, and fresh tandoori naan."]},
+{id:26,name:"Degi Mutton Yakhni Pulao",category:"Pakistani",time:"70 min",difficulty:"Hard",rating:"5.0",image:"https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=85",description:"Fragrant basmati rice slow-cooked in rich whole-spice mutton bone broth with caramelized onions.",ingredients:["Mutton meat on the bone — 750g","Aged long-grain basmati rice — 500g","Onions — 2 large sliced","Yogurt — ½ cup","Fennel seeds & Coriander seeds — 1½ tbsp each (in spice pouch)","Whole spices (cinnamon, cloves, black cardamom, star anise)","Ghee — ½ cup","Ginger garlic paste — 2 tbsp"],steps:["Boil mutton with 6 cups water, spice pouch (fennel, coriander, garlic, onion, whole spices) for 45 minutes to prepare rich Yakhni broth. Strain and keep broth.","In a separate heavy pot, heat ghee and fry sliced onions until deep golden brown. Save half for garnish.","Add ginger garlic paste, cooked mutton pieces, and yogurt. Sauté for 6-8 minutes until fragrant.","Pour the strained mutton broth into the pot and bring to a rolling boil.","Add soaked basmati rice and cook on high heat until 80% of the liquid is absorbed.","Cover with a tight lid on lowest heat (Dum) for 15 minutes.","Fluff gently and serve with cucumber mint raita."]},
+{id:27,name:"Lahori Chargha (Whole Fried Chicken)",category:"Pakistani",time:"60 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=900&q=85",description:"Steamed then deep-fried whole chicken marinated in tangy Lahori spices and lemon juice.",ingredients:["Whole skinless chicken with deep cuts — 1.2kg","Thick yogurt — ½ cup","Lemon juice — 3 tbsp","Lahori Chargha masala — 3 tbsp","Egg — 1 beaten","Ginger garlic paste — 2 tbsp","Chaat masala for dusting","Oil for deep frying"],steps:["Whisk yogurt, lemon juice, ginger garlic, Chargha masala, egg, and salt into a thick marinade.","Rub marinade deep into chicken cuts and let rest for at least 3 hours or overnight.","Place marinated chicken in a steamer basket and steam over boiling water for 25 minutes until cooked through.","Remove and let cool completely on a wire rack so excess moisture evaporates.","Heat oil in a wok to 180°C and deep fry whole chicken for 6-8 minutes until deeply golden and crispy on all sides.","Dust generously with chaat masala and serve with tamarind sauce and parathas."]},
+{id:28,name:"Shahi Haleem",category:"Pakistani",time:"120 min",difficulty:"Hard",rating:"5.0",image:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85",description:"Slow-cooked stew of shredded beef, broken wheat, barley, and mixed lentils infused with royal spices.",ingredients:["Boneless beef or mutton shank — 600g","Broken wheat (dalia) & Barley — 1 cup soaked","Mixed lentils (chana, masoor, moong, mash) — 1 cup soaked","Haleem spice blend — 3 tbsp","Fried onions (Birista) — 1 cup","Ghee — ½ cup","Fresh ginger, green chilies, lemon, and chaat masala for garnish"],steps:["Soak wheat, barley, and lentils overnight. Boil until completely soft, then blend lightly to a coarse paste.","In another pot, heat ghee, sear beef with ginger garlic, Haleem spices, and water until meat shreds apart easily.","Shred cooked meat finely using wooden masher or forks.","Combine shredded meat and lentil-wheat mixture in a large pot.","Cook on low heat for 45 minutes, pounding continuously with a wooden masher (ghotna) until silky and elastic.","Prepare tarka with sliced onions fried in hot ghee and pour over haleem.","Serve hot with julienned ginger, chopped mint, lemon wedges, and fried onions."]},
+{id:29,name:"Dhaba Style Dal Tadka",category:"Pakistani",time:"30 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85",description:"Creamy yellow lentils tempered with sizzling garlic, cumin, dried red chilies, and desi ghee.",ingredients:["Yellow lentils (Toor & Moong dal) — 1 cup","Tomatoes — 2 chopped","Onion — 1 finely diced","Desi Ghee — 3 tbsp","Garlic cloves — 5 sliced","Cumin seeds — 1 tsp","Dried red chilies — 3","Kashmiri red chili powder — 1 tsp","Fresh coriander — chopped"],steps:["Wash and pressure cook lentils with turmeric, salt, and 3 cups water until tender (about 12 minutes).","In a pan, heat 1 tbsp ghee, sauté diced onions until translucent, add tomatoes, and cook until mashed.","Pour cooked lentils into the onion-tomato masala and simmer for 5 minutes.","Prepare sizzling tadka: In a small pan, heat remaining ghee, add sliced garlic until golden, cumin seeds, dried red chilies, and chili powder.","Pour the bubbling tadka immediately over the dal and cover with lid for 2 minutes to trap aromas.","Garnish with coriander and serve with steamed basmati rice or tandoori roti."]},
+{id:30,name:"Murgh Makhani (Butter Chicken)",category:"Chicken",time:"40 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=900&q=85",description:"Tender tandoori chicken pieces simmered in a velvety, buttery tomato and cashew cream gravy.",ingredients:["Boneless chicken thighs — 600g diced","Fresh tomato puree — 2 cups","Butter — 4 tbsp","Heavy cream — ½ cup","Cashew paste — 2 tbsp","Kasoori methi (dried fenugreek) — 1 tbsp","Honey or sugar — 1 tsp","Garam masala & Kashmiri chili powder — 1 tsp each"],steps:["Marinate chicken in yogurt, lemon juice, chili powder, and ginger garlic for 30 minutes. Pan sear until charred and cooked.","In a saucepan, melt 2 tbsp butter, add whole spices and tomato puree with cashew paste. Simmer for 15 minutes until thick.","Blend tomato sauce until silkily smooth, strain back into pan.","Add cooked chicken pieces, remaining butter, heavy cream, honey, and garam masala.","Simmer on low heat for 7-8 minutes until sauce is glossy.","Crush kasoori methi between your palms and stir into curry. Garnish with a swirl of cream and serve with garlic naan."]},
+{id:31,name:"Creamy Chicken Handi",category:"Chicken",time:"35 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=85",description:"Boneless chicken cubes cooked in a traditional claypot gravy with yogurt, cream, and roasted coriander.",ingredients:["Boneless chicken breast / thighs — 500g cubes","Yogurt — ½ cup whisked","Fresh cooking cream — 4 tbsp","Onion paste — 1 cup","Ginger garlic paste — 1½ tbsp","Roasted crushed coriander & cumin — 1 tbsp each","White pepper powder — ½ tsp","Butter / Ghee — 3 tbsp"],steps:["Heat ghee in a handi or heavy pan and fry onion paste until golden.","Add ginger garlic paste and chicken cubes; fry until chicken changes color.","Lower flame, stir in whisked yogurt, white pepper, crushed roasted cumin, and coriander.","Cover and cook on low heat for 12 minutes until chicken is tender.","Pour in cooking cream and simmer for 3 minutes until oil separates.","Garnish with ginger juliennes, green chilies, and serve with hot butter kulchas."]},
+{id:32,name:"Chicken Manchurian with Egg Fried Rice",category:"Chicken",time:"30 min",difficulty:"Medium",rating:"4.8",image:"https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=900&q=85",description:"Crispy chicken bites tossed in sweet, spicy, and tangy Indo-Chinese garlic sauce.",ingredients:["Boneless chicken cubes — 400g","Cornstarch — 3 tbsp + Egg — 1","Garlic — 2 tbsp finely chopped","Ginger — 1 tbsp","Soy sauce & Chili garlic sauce — 2 tbsp each","Tomato ketchup — 3 tbsp","Capsicum & spring onion — ½ cup chopped","Chicken broth — 1 cup"],steps:["Coat chicken with egg, cornstarch, salt, and pepper. Deep fry or pan fry until golden and crispy.","In a wok, heat 2 tbsp oil, stir-fry chopped garlic and ginger for 30 seconds on high heat.","Add capsicum and spring onions, sauté for 1 minute.","Add soy sauce, ketchup, chili garlic sauce, vinegar, and chicken broth. Bring to a boil.","Stir in cornstarch slurry (1 tbsp cornstarch in 2 tbsp water) until sauce thickens to a glossy glaze.","Toss in the crispy chicken bites and coat thoroughly.","Serve hot with wok-tossed egg fried rice."]},
+{id:33,name:"Chicken Malai Boti Skewers",category:"Chicken",time:"35 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",description:"Supremely tender and creamy chicken breast chunks marinated in thick cream, green chilies, and white pepper.",ingredients:["Boneless chicken breast — 500g cubes","Heavy cream — 3 tbsp","Thick Greek yogurt — 3 tbsp","Green chili paste — 1 tbsp","Garlic ginger paste — 1 tbsp","White pepper & cumin powder — 1 tsp each","Melted butter for basting"],steps:["Mix heavy cream, yogurt, green chili paste, garlic ginger, white pepper, and salt in a bowl.","Coat chicken cubes thoroughly and marinate for at least 2 hours (or overnight).","Thread chicken onto soaked wooden skewers.","Grill on a hot grill pan or barbecue for 8-10 minutes, turning and basting with melted butter.","Char lightly for a smoky restaurant finish.","Serve with mint raita and soft naan."]},
+{id:34,name:"Crispy Chicken Shawarma Wrap",category:"Chicken",time:"25 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=85",description:"Spiced Middle Eastern shredded chicken wrapped in pita with garlic toum sauce, pickles, and crispy fries.",ingredients:["Boneless chicken thighs — 400g thinly sliced","Shawarma spice blend (cumin, paprika, cinnamon, garlic) — 1½ tbsp","Olive oil & lemon juice — 2 tbsp each","Pita or flatbreads — 3","Garlic Toum sauce or Mayo — 4 tbsp","Pickled cucumbers — sliced","French fries — 1 cup"],steps:["Marinate chicken slices in shawarma spices, olive oil, lemon juice, and garlic for 20 minutes.","Pan-sear on high heat in a cast-iron skillet for 6-8 minutes until nicely charred and juicy.","Warm pita bread on the griddle.","Spread a generous layer of garlic toum sauce across the warm pita.","Fill with sliced shawarma chicken, crunchy pickles, and a handful of hot french fries.","Roll tightly, toast on the pan for 1 minute for a crispy outer crust, and slice diagonally."]},
+{id:35,name:"Zafrani Shahi Kheer (Rice Pudding)",category:"Dessert",time:"45 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=900&q=85",description:"Rich, slow-simmered basmati rice dessert infused with saffron strands, green cardamom, and toasted pistachios.",ingredients:["Whole full-fat milk — 1.5 liters","Basmati rice — ¼ cup (soaked & crushed)","Sugar — ½ cup (to taste)","Saffron strands — 15 steeped in warm milk","Cardamom powder — ½ tsp","Slivered almonds & pistachios — ¼ cup","Rose water or Kewra water — 1 tsp"],steps:["Soak basmati rice for 30 minutes, then coarsely crush with your fingers.","Bring whole milk to a boil in a heavy-bottomed pot.","Add crushed rice and simmer on low heat for 30-35 minutes, stirring frequently so it doesn't stick.","When rice is creamy and milk has reduced by a third, stir in sugar, cardamom powder, and saffron milk.","Cook for another 8-10 minutes until thick and luscious.","Stir in rose water and half the toasted nuts.","Pour into clay serving bowls, chill in refrigerator for 2 hours, and top with remaining slivered pistachios and edible silver foil."]},
+{id:36,name:"Warm Fudgy Chocolate Brownies",category:"Dessert",time:"35 min",difficulty:"Easy",rating:"5.0",image:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=85",description:"Dense, gooey chocolate brownies with glossy crinkly tops, loaded with melted dark chocolate chunks.",ingredients:["Dark chocolate (70%) — 200g","Unsalted butter — ½ cup (115g)","Granulated sugar — ¾ cup","Brown sugar — ½ cup","Eggs — 3 at room temperature","All-purpose flour — ½ cup","Dutch cocoa powder — ¼ cup","Vanilla extract — 1 tsp","Flaky sea salt — for sprinkling"],steps:["Preheat oven to 175°C (350°F) and line an 8-inch square pan with parchment paper.","Melt dark chocolate and butter together in a heatproof bowl over simmering water until smooth. Cool slightly.","In a separate bowl, whisk eggs, granulated sugar, and brown sugar vigorously for 4-5 minutes until pale and frothy (this creates the shiny crinkle top!).","Gently fold in the melted chocolate mixture and vanilla extract.","Sift in flour, cocoa powder, and salt. Fold just until no dry streaks remain.","Pour into prepared pan and bake for 22-25 minutes (center should still be slightly fudgy).","Cool before slicing into squares. Serve with a scoop of vanilla ice cream."]},
+{id:37,name:"Mango Cardamom Kulfi",category:"Dessert",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85",description:"Creamy traditional frozen dessert made with ripe Alphonso mango puree, condensed milk, and crushed pistachios.",ingredients:["Sweet mango pulp — 1½ cups","Sweetened condensed milk — 1 can (400g)","Heavy whipping cream — 1 cup","Evaporated milk — 1 cup","Cardamom powder — ½ tsp","Crushed pistachios — 3 tbsp"],steps:["In a blender, combine mango pulp, condensed milk, heavy cream, evaporated milk, and cardamom powder.","Blend on high for 60 seconds until creamy and frothy.","Stir in 2 tbsp of finely crushed pistachios.","Pour mixture into traditional kulfi molds or popsicle containers. Insert wooden sticks.","Freeze for at least 6-8 hours until completely set.","Unmold by running warm water over the outside of the molds for 10 seconds.","Garnish with remaining pistachios and serve frozen."]},
+{id:38,name:"Classic New York Cheesecake",category:"Dessert",time:"75 min",difficulty:"Hard",rating:"4.9",image:"https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=85",description:"Silky smooth, rich baked cheesecake on a buttery graham cracker crust with berry coulis.",ingredients:["Cream cheese (softened) — 600g","Graham cracker / digestive biscuits — 180g crushed","Melted butter — 4 tbsp","Sugar — 1 cup","Sour cream — ½ cup","Eggs — 3","Vanilla extract — 1 tbsp","Lemon zest — 1 tsp"],steps:["Preheat oven to 160°C (325°F). Mix biscuit crumbs with melted butter and press firmly into an 8-inch springform pan. Bake crust for 10 min.","Beat cream cheese and sugar on low speed until smooth and lump-free.","Add sour cream, vanilla, lemon zest, and beat in eggs one at a time on low speed.","Pour batter over crust. Place springform pan in a larger roasting pan with warm water (water bath).","Bake for 55-60 minutes until edges are set but center has a slight jiggle.","Turn off oven, prop door open slightly, and let cool for 1 hour inside oven.","Refrigerate for at least 6 hours before slicing. Serve with fresh raspberry coulis."]},
+{id:39,name:"Italian Espresso Tiramisu",category:"Dessert",time:"30 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85",description:"Decadent Italian dessert with espresso-soaked ladyfingers and whipped mascarpone cream dusted with cocoa.",ingredients:["Ladyfinger biscuits (Savoiardi) — 24","Mascarpone cheese — 400g","Heavy whipping cream — 1 cup","Powdered sugar — ½ cup","Freshly brewed strong espresso — 1½ cups cooled","Cocoa powder for dusting","Vanilla extract — 1 tsp"],steps:["Whip heavy cream and powdered sugar to stiff peaks. In another bowl, beat mascarpone cheese with vanilla until smooth.","Gently fold whipped cream into mascarpone mixture.","Quickly dip each ladyfinger into cooled espresso (1-2 seconds) and arrange in a single layer in a serving dish.","Spread half of the mascarpone cream over the biscuit layer.","Add a second layer of dipped ladyfingers and top with remaining mascarpone cream. Smooth with a spatula.","Dust generously with Dutch-process cocoa powder through a fine sieve.","Chill in refrigerator for at least 4 hours before serving."]},
+{id:40,name:"Lemon Herb Grilled Salmon & Asparagus",category:"Healthy",time:"20 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85",description:"Pan-seared wild salmon fillets seasoned with garlic, dill, and lemon served alongside crisp tender asparagus.",ingredients:["Fresh salmon fillets — 2 (200g each)","Fresh asparagus spears — 1 bunch trimmed","Olive oil — 2 tbsp","Garlic cloves — 3 minced","Lemon juice & zest — 1 lemon","Fresh dill — 2 tbsp chopped","Sea salt & crushed black pepper"],steps:["Pat salmon fillets dry and season both sides with salt, pepper, garlic, and fresh dill.","Toss trimmed asparagus in 1 tbsp olive oil, salt, and pepper.","Heat a heavy skillet or grill pan over medium-high heat with remaining olive oil.","Place salmon skin-side down and cook undisturbed for 4-5 minutes until skin is crispy.","Flip salmon and add asparagus to the side of the pan. Cook for another 3-4 minutes.","Squeeze fresh lemon juice over salmon and asparagus.","Serve immediately with lemon wedges and a light herb drizzle."]},
+{id:41,name:"Avocado & Roasted Chickpea Power Salad",category:"Healthy",time:"15 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85",description:"Crispy paprika-roasted chickpeas, creamy avocado, baby spinach, cucumbers, and tahini lemon dressing.",ingredients:["Canned chickpeas — 1 can drained & rinsed","Ripe avocado — 1 sliced","Baby spinach & arugula — 3 cups","English cucumber — 1 diced","Cherry tomatoes — 1 cup halved","Smoked paprika & cumin — 1 tsp each","Tahini — 2 tbsp","Lemon juice — 2 tbsp","Warm water — 1 tbsp to thin dressing"],steps:["Toss drained chickpeas with olive oil, smoked paprika, cumin, and sea salt. Roast in a pan for 8-10 minutes until crunchy.","In a salad bowl, layer baby spinach, arugula, halved tomatoes, diced cucumbers, and sliced avocado.","Whisk tahini, lemon juice, minced garlic, warm water, salt, and pepper into a silky smooth dressing.","Top salad with warm crispy roasted chickpeas and sunflower seeds.","Drizzle creamy tahini dressing over top and enjoy fresh."]},
+{id:42,name:"Greek Yogurt Berry Honey Crunch Bowl",category:"Healthy",time:"8 min",difficulty:"Easy",rating:"4.7",image:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85",description:"High-protein thick Greek yogurt layered with organic berries, chia seeds, roasted almonds, and raw honey.",ingredients:["Plain Greek yogurt (0% or 2%) — 1½ cups","Fresh strawberries & blueberries — 1 cup","Toasted granola — ¼ cup","Chia seeds & flax seeds — 1 tbsp each","Sliced roasted almonds — 2 tbsp","Raw organic honey — 1½ tbsp"],steps:["Spoon chilled thick Greek yogurt into a wide breakfast bowl.","Arrange fresh sliced strawberries and blueberries neatly across one side.","Add toasted granola, sliced almonds, and a sprinkle of chia seeds.","Drizzle golden raw honey over the entire bowl.","Serve immediately for an energetic protein-packed meal."]},
+{id:43,name:"Sweet Potato & Black Bean Fiesta Bowl",category:"Healthy",time:"25 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=900&q=85",description:"Roasted cinnamon-cumin sweet potato cubes, spiced black beans, sweet corn, brown rice, and cilantro lime dressing.",ingredients:["Sweet potato — 1 large diced","Black beans — 1 cup cooked","Sweet corn kernels — ½ cup","Cooked brown rice — 1½ cups","Fresh cilantro — ¼ cup chopped","Lime juice — 2 tbsp","Olive oil — 1 tbsp","Cumin & chili powder — 1 tsp each"],steps:["Toss sweet potato cubes with olive oil, cumin, chili powder, and salt. Roast at 200°C (400°F) for 20 minutes until tender and caramelized.","Warm black beans with a pinch of garlic powder and cumin.","In a serving bowl, arrange warm brown rice, roasted sweet potatoes, black beans, and sweet corn.","Whisk olive oil, fresh lime juice, salt, and chopped cilantro.","Drizzle dressing over the bowl and garnish with avocado slices and lime."]},
+{id:44,name:"Green Goddess Antioxidant Smoothie Bowl",category:"Healthy",time:"10 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=85",description:"Vibrant thick green smoothie bowl with spinach, frozen mango, banana, and coconut milk topped with kiwi and hemp seeds.",ingredients:["Frozen banana — 1","Frozen mango chunks — 1 cup","Baby spinach — 1 large cup packed","Coconut milk or almond milk — ½ cup","Chia seeds — 1 tbsp","Fresh kiwi slices, coconut flakes & hemp seeds for topping"],steps:["Place frozen banana, mango chunks, fresh spinach, and coconut milk into a high-speed blender.","Blend on high, stopping to tamp down ingredients until thick and soft-serve consistency.","Scoop vibrant green smoothie into a chilled bowl.","Neatly arrange kiwi slices, coconut flakes, chia seeds, and berries on top.","Enjoy immediately with a spoon."]},
+{id:45,name:"Classic Eggs Benedict with Hollandaise",category:"Breakfast",time:"25 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=900&q=85",description:"Toasted English muffins topped with seared smoked ham, poached eggs, and rich velvety lemon hollandaise sauce.",ingredients:["English muffins — 2 split and toasted","Eggs — 4 (for poaching) + Egg yolks — 2 (for sauce)","Melted butter — ½ cup (warm)","Lemon juice — 1 tbsp","Smoked ham or turkey bacon — 4 slices","White vinegar — 1 tbsp","Fresh chives — chopped"],steps:["Make Hollandaise: Whisk 2 egg yolks and lemon juice in a heatproof bowl over simmering water until pale and thick. Slowly drizzle in warm melted butter while whisking constantly until thick and creamy. Season with salt and cayenne.","Poach eggs in gently simmering water with 1 tbsp vinegar for 3 minutes until whites are firm and yolk is soft.","Pan-sear smoked ham slices until lightly browned.","Place toasted English muffin halves on plates, top each with seared ham and a warm poached egg.","Ladle warm hollandaise sauce generously over eggs and garnish with finely chopped chives."]},
+{id:46,name:"Crispy Golden Belgian Waffles",category:"Breakfast",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=900&q=85",description:"Crispy on the outside, fluffy on the inside Belgian waffles with deep pockets for pure maple syrup and berries.",ingredients:["All-purpose flour — 2 cups","Baking powder — 1 tbsp + Sugar — 2 tbsp","Eggs — 2 separated (whites whipped to stiff peaks)","Milk — 1¾ cups","Melted butter — ½ cup","Vanilla extract — 1 tsp","Pure maple syrup & fresh berries"],steps:["Whisk flour, sugar, baking powder, and salt in a bowl.","In a separate bowl, whisk milk, melted butter, egg yolks, and vanilla. Stir into dry ingredients until combined.","Gently fold whipped egg whites into the batter with a spatula for cloud-like fluffiness.","Preheat and grease waffle iron. Pour batter and cook until golden brown and steam stops (4-5 minutes).","Serve hot topped with fresh strawberries, blueberries, a pat of butter, and maple syrup."]},
+{id:47,name:"Lahori Halwa Puri & Chana Platter",category:"Breakfast",time:"45 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=85",description:"Iconic Pakistani Sunday breakfast: crispy puffed puris, spicy chickpea curry, sweet semolina halwa, and mango pickle.",ingredients:["All-purpose flour (maida) — 2 cups","Semolina (sooji) — 1 cup","Sugar — 1 cup","Ghee — ½ cup","Boiled chickpeas — 2 cups with broth","Nigella seeds (kalonji) & fennel — 1 tsp","Oil for deep frying puris"],steps:["Prepare puri dough with flour, salt, oil, and water. Rest for 20 minutes. Roll into thin discs and deep fry in smoking hot oil for 10 seconds until puffed and golden.","Prepare Halwa: Roast semolina in ghee until fragrant. Add sugar water and cardamoms, stir until thick and ghee separates.","Prepare Chana: Sauté cumin, kalonji, ginger garlic, and tomatoes. Add boiled chickpeas and simmer to a thick gravy.","Serve piping hot puffed puris alongside sweet halwa, savory chana, and sour mango pickle."]},
+{id:48,name:"Brioche French Toast with Caramelized Bananas",category:"Breakfast",time:"18 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=85",description:"Thick golden slices of brioche soaked in cinnamon vanilla custard topped with butter-caramelized bananas.",ingredients:["Thick brioche bread — 4 slices","Eggs — 3","Whole milk or cream — ½ cup","Cinnamon & Vanilla extract — 1 tsp each","Butter — 3 tbsp","Bananas — 2 sliced","Brown sugar — 2 tbsp"],steps:["Whisk eggs, milk, cinnamon, vanilla, and a pinch of salt in a shallow dish.","Dip brioche slices into the custard for 15 seconds per side.","Melt 1 tbsp butter in a skillet over medium heat and cook French toast for 3-4 minutes per side until golden brown.","In another pan, melt remaining butter and brown sugar. Add banana slices and cook for 2 minutes until caramelized and syrupy.","Stack warm French toast, spoon caramelized bananas and sauce over top, and dust with powdered sugar."]},
+{id:49,name:"Fluffy Garden Herb & Cheese Omelette",category:"Breakfast",time:"10 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1510693206972-df098062cb71?auto=format&fit=crop&w=900&q=85",description:"French-style soft folded eggs filled with creamy goat cheese or cheddar, chives, and cherry tomatoes.",ingredients:["Fresh eggs — 3","Butter — 1½ tbsp","Milk — 1 tbsp","Grated cheddar or goat cheese — ¼ cup","Fresh chives & parsley — 2 tbsp minced","Cherry tomatoes — 4 halved","Salt & freshly cracked black pepper"],steps:["Whisk eggs with milk, salt, and pepper with a fork until completely blended and smooth.","Melt butter in an 8-inch non-stick skillet over medium-low heat.","Pour in eggs and swirl gently, pulling cooked edges toward center so runny egg fills the gaps.","When top is softly set but still creamy, sprinkle cheese, herbs, and tomatoes across one half.","Fold omelette over in half and slide onto a warm plate.","Brush top with a touch of melted butter and sprinkle extra fresh herbs."]},
+{id:50,name:"Creamy Tuscan Garlic Chicken",category:"Chicken",time:"30 min",difficulty:"Easy",rating:"5.0",image:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=85",description:"Pan-seared golden chicken breasts in a rich garlic, sun-dried tomato, baby spinach, and parmesan cream sauce.",ingredients:["Boneless skinless chicken breasts — 2 (cut horizontally)","Heavy whipping cream — 1 cup","Sun-dried tomatoes in oil — ½ cup drained & sliced","Fresh baby spinach — 2 cups packed","Garlic cloves — 4 minced","Chicken broth — ½ cup","Grated Parmesan cheese — ½ cup","Olive oil & Butter — 1 tbsp each","Italian seasoning — 1 tsp"],steps:["Season chicken breasts with salt, black pepper, and Italian seasoning.","Heat olive oil and butter in a large skillet over medium-high heat. Sear chicken for 5-6 minutes per side until golden and cooked through. Transfer to a plate.","In the same skillet, sauté minced garlic for 1 minute until fragrant.","Pour in chicken broth and heavy cream; bring to a gentle simmer.","Stir in grated Parmesan and sliced sun-dried tomatoes until the sauce is creamy and smooth.","Add fresh baby spinach and simmer for 2 minutes until wilted.","Return cooked chicken breasts and rested juices back into the skillet, spooning the velvety sauce over top. Serve hot with pasta, rice, or crusty bread."]},
+{id:51,name:"Classic Chicken Fettuccine Alfredo",category:"Chicken",time:"25 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=900&q=85",description:"Tender grilled herb chicken breast slices served over fettuccine coated in an authentic Roman-style parmesan butter cream.",ingredients:["Fettuccine pasta — 350g","Boneless chicken breast — 2","Butter — 4 tbsp (½ stick)","Heavy cream — 1¼ cups","Freshly grated Parmigiano-Reggiano — 1 cup","Garlic cloves — 3 minced","Nutmeg — a tiny pinch","Fresh parsley — chopped for garnish"],steps:["Bring a large pot of salted water to a boil and cook fettuccine until al dente (about 9-10 minutes). Reserve ½ cup pasta water before draining.","Season chicken with salt, black pepper, and garlic powder. Pan-sear in olive oil for 6 minutes per side until golden; rest and slice into strips.","In a deep saucepan, melt butter over medium heat. Add minced garlic and cook for 30 seconds.","Pour in heavy cream and bring to a gentle simmer for 3 minutes.","Reduce heat to low and whisk in freshly grated Parmigiano-Reggiano and a pinch of nutmeg until melted and silky smooth.","Toss the drained fettuccine into the sauce, adding a splash of reserved pasta water if needed to reach glossy perfection.","Plate fettuccine, top with sliced chicken breast, extra parmesan, and chopped fresh parsley."]},
+{id:52,name:"Crispy Chicken Parmesan (Parmigiana)",category:"Chicken",time:"40 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=900&q=85",description:"Crispy herb-panko crusted chicken cutlets smothered in rich marinara, fresh basil, and bubbling melted mozzarella.",ingredients:["Chicken breast cutlets — 2 large (pounded to ½ inch)","Italian seasoned panko breadcrumbs — 1 cup","Grated Parmesan cheese — ½ cup","Eggs — 2 beaten","All-purpose flour — ½ cup","Marinara sauce — 1½ cups","Fresh mozzarella cheese — 150g sliced or shredded","Fresh basil leaves — ¼ cup","Olive oil for shallow frying"],steps:["Preheat oven to 200°C (400°F).","Set up breading station: Flour in bowl 1, beaten eggs in bowl 2, and panko mixed with grated parmesan and Italian herbs in bowl 3.","Dredge chicken cutlets in flour, dip in beaten eggs, and press firmly into panko mixture for full coverage.","Heat ¼ inch of olive oil in a skillet over medium-high heat. Fry cutlets for 3-4 minutes per side until deeply golden and crispy. Drain on paper towels.","Spread ½ cup of marinara sauce in the bottom of a baking dish. Place fried chicken cutlets in the dish.","Top each cutlet with remaining marinara sauce, fresh mozzarella slices, and a sprinkle of parmesan.","Bake for 12-15 minutes until cheese is melted and bubbling with golden brown spots. Garnish with fresh torn basil."]},
+{id:53,name:"Japanese Crispy Chicken Katsu Curry",category:"Chicken",time:"45 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85",description:"Crunchy Japanese panko-breaded chicken cutlet sliced over steamed short-grain rice with rich, savory Japanese curry sauce.",ingredients:["Boneless chicken thighs or breasts — 2","Japanese panko breadcrumbs — 1½ cups","Japanese curry roux cubes (e.g., S&B Golden Curry) — 3 cubes","Carrot — 1 chopped","Yellow onion — 1 diced","Potato — 1 peeled & cubed","Chicken stock or water — 3 cups","Steamed Japanese sushi rice — 3 cups","Oil for deep frying"],steps:["In a pot, heat 1 tbsp oil and sauté diced onion, carrot, and potato for 5 minutes.","Add chicken stock, bring to a boil, cover, and simmer for 15 minutes until vegetables are tender.","Turn off heat, break in Japanese curry roux cubes, and stir until completely dissolved. Simmer on low for 5 minutes until thick and glossy.","Pound chicken lightly, season with salt and white pepper, dredge in flour, egg, and coat thoroughly with panko breadcrumbs.","Deep fry chicken in hot oil (175°C / 350°F) for 5-6 minutes until crispy and golden. Drain on a wire rack for 2 minutes, then slice into strips.","Serve steamed short-grain rice on one side of a wide bowl, arrange sliced katsu next to it, and ladle hot curry sauce generously around."]},
+{id:54,name:"Sticky Honey Garlic Chicken Thighs",category:"Chicken",time:"25 min",difficulty:"Easy",rating:"4.9",image:"https://images.unsplash.com/photo-1527477321055-43615b651017?auto=format&fit=crop&w=900&q=85",description:"Tender, caramelized chicken thighs coated in a sweet, sticky garlic and soy glaze with sesame seeds and green onions.",ingredients:["Boneless skinless chicken thighs — 600g","Honey — ⅓ cup","Low-sodium soy sauce — ¼ cup","Garlic cloves — 6 minced","Apple cider vinegar — 1 tbsp","Cornstarch — 1 tsp dissolved in 1 tbsp water","Toasted sesame oil — 1 tsp","Toasted sesame seeds & sliced scallions for garnish"],steps:["Season chicken thighs lightly with salt and black pepper.","In a bowl, whisk honey, soy sauce, minced garlic, apple cider vinegar, sesame oil, and cornstarch slurry.","Heat 1 tbsp vegetable oil in a heavy skillet or cast iron over medium-high heat.","Add chicken thighs and sear for 5-6 minutes per side until browned and cooked through.","Pour the honey garlic sauce directly into the hot skillet with the chicken.","Simmer for 2-3 minutes, basting chicken continuously as the sauce bubbles into a thick, glossy, sticky glaze.","Garnish with toasted sesame seeds and sliced green onions. Serve over fragrant jasmine rice."]},
+{id:55,name:"Smoky Sizzling Chicken Fajitas",category:"Chicken",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=900&q=85",description:"Sizzling cast-iron strips of spiced chicken breast, colorful bell peppers, and caramelized onions served with warm tortillas.",ingredients:["Chicken breast — 500g sliced into thin strips","Bell peppers (red, green, yellow) — 3 sliced into strips","Red onion — 1 large sliced","Fajita spice blend (chili powder, cumin, smoked paprika, garlic, oregano) — 2 tbsp","Fresh lime juice — 2 tbsp","Olive oil — 2 tbsp","Warm flour tortillas, guacamole, and sour cream for serving"],steps:["Toss chicken strips with olive oil, lime juice, and fajita seasoning in a bowl.","Heat a heavy cast-iron skillet over high heat until smoking hot.","Add 1 tbsp oil and sear chicken strips in a single layer for 5-6 minutes, tossing until nicely charred and cooked through. Remove chicken.","Add sliced bell peppers and onions to the smoking skillet; stir-fry for 3-4 minutes until blistered with charred edges yet still crisp-tender.","Toss chicken back into the skillet with the sizzling peppers and onions.","Squeeze fresh lime juice over the pan and serve immediately while sizzling hot with warm tortillas, guacamole, salsa, and sour cream."]},
+{id:56,name:"Shahi Mughlai White Chicken Korma",category:"Chicken",time:"45 min",difficulty:"Medium",rating:"5.0",image:"https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=900&q=85",description:"A royal white curry made with tender bone-in chicken, cashew-almond paste, yogurt, white pepper, and fragrant kewra water.",ingredients:["Chicken pieces — 750g","Thick yogurt — 1 cup whisked","Blanched almonds & cashews paste — ¼ cup","Fried onion paste (white/light golden) — ½ cup","Ginger garlic paste — 2 tbsp","Whole green cardamom & cloves — 4 each","White pepper powder — 1 tsp","Ghee — 4 tbsp","Kewra water — 1 tsp","Slivered almonds for garnish"],steps:["Heat ghee in a heavy pot and add green cardamoms, cloves, and bay leaf until aromatic.","Add ginger garlic paste and chicken pieces; sauté on medium heat for 6-8 minutes until chicken turns white.","Lower the heat and add whisked yogurt, fried onion paste, and white pepper. Stir continuously for 3 minutes to prevent curdling.","Add the cashew and almond nut paste with ½ cup water. Mix well.","Cover with a tight lid and simmer on low heat (Dum) for 20 minutes until chicken is tender and fragrant ghee rises to the surface.","Stir in a drop of kewra water and green chili slits.","Garnish with slivered almonds and serve with rogheni naan or sheermal."]},
+{id:57,name:"Spicy Peri Peri Flame-Grilled Chicken",category:"Chicken",time:"40 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=900&q=85",description:"Fiery South African-Portuguese style grilled chicken basted in homemade African bird's eye chili, garlic, and citrus sauce.",ingredients:["Chicken leg quarters (with deep slashes) — 4 pieces","Bird's eye red chilies or red jalapeños — 4-5","Garlic cloves — 6","Fresh lemon juice & zest — 1 lemon","Smoked paprika & oregano — 1 tbsp each","Olive oil — ¼ cup","Red wine vinegar — 2 tbsp","Sea salt — 1½ tsp"],steps:["Blend chilies, garlic, lemon juice, zest, smoked paprika, oregano, vinegar, olive oil, and salt in a blender until smooth to create the fiery Peri Peri marinade.","Rub marinade all over chicken leg quarters, getting deep inside the slashes. Marinate in refrigerator for at least 3 hours or overnight.","Preheat barbecue grill or oven grill to medium-high heat (200°C / 400°F).","Place chicken on the grill and cook for 30-35 minutes, turning every 7-8 minutes and basting generously with extra peri-peri sauce.","Cook until skin is beautifully charred and crispy, and chicken juices run clear.","Serve with grilled corn on the cob, spicy peri-peri salted fries, and lemon wedges."]},
+{id:58,name:"Crispy Golden Popcorn Chicken Bites",category:"Chicken",time:"20 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=85",description:"Bite-sized tender chicken breast pieces coated in seasoned buttermilk and crispy flour, fried to crunchy golden perfection.",ingredients:["Boneless chicken breast — 500g cut into bite-sized 1-inch cubes","Buttermilk — ¾ cup","All-purpose flour — 1 cup","Cornstarch — ¼ cup","Garlic powder, onion powder & paprika — 1 tsp each","White pepper & salt — 1 tsp each","Oil for deep frying","Honey mustard dip or BBQ sauce"],steps:["Marinate bite-sized chicken cubes in seasoned buttermilk for 20 minutes.","In a wide bowl, whisk flour, cornstarch, garlic powder, onion powder, paprika, salt, and white pepper.","Drizzle 2 tablespoons of buttermilk into the flour mix and rub with your fingers to form small crunchy flakes.","Toss marinated chicken cubes in the seasoned flour mix, pressing firmly so each piece is coated with crunchy bits.","Heat frying oil to 180°C (350°F).","Fry popcorn chicken in small batches for 3-4 minutes until golden brown and extra crunchy. Drain on wire rack.","Dust with a touch of sea salt and serve immediately with honey mustard or garlic dipping sauce."]},
+{id:59,name:"Japanese Teriyaki Chicken Rice Bowl",category:"Chicken",time:"25 min",difficulty:"Easy",rating:"4.8",image:"https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=900&q=85",description:"Juicy pan-seared chicken glazed in homemade sweet soy teriyaki sauce over steamed rice with steamed broccoli and sesame.",ingredients:["Boneless skin-on or skinless chicken thighs — 400g","Soy sauce — 3 tbsp","Mirin (Japanese sweet rice wine) — 2 tbsp","Sake or water — 1 tbsp","Brown sugar or honey — 1½ tbsp","Fresh ginger — 1 tsp grated","Steamed Jasmine or Calrose rice — 2 cups","Steamed broccoli florets & toasted sesame seeds"],steps:["Whisk soy sauce, mirin, sake (or water), brown sugar, and grated ginger in a small bowl until sugar dissolves.","Heat a skillet over medium-high heat. Place chicken thighs smooth-side down and cook for 5 minutes until crispy and golden.","Flip chicken and cook for another 4 minutes until cooked through. Drain excess fat from the pan.","Pour the teriyaki sauce mixture into the pan around the chicken.","Let the sauce bubble and reduce for 2-3 minutes, turning chicken repeatedly until it is thickly coated in a glossy caramel glaze.","Remove chicken to a cutting board and slice into bite-sized strips.","Fill bowls with warm steamed rice, arrange sliced teriyaki chicken and steamed broccoli, and spoon extra warm teriyaki glaze on top with sesame seeds."]},
+{id:60,name:"Moroccan Lemon Olive Chicken Tagine",category:"Chicken",time:"50 min",difficulty:"Medium",rating:"4.9",image:"https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=900&q=85",description:"Aromatic North African chicken braised with preserved lemons, green olives, saffron, ginger, and fresh coriander.",ingredients:["Chicken bone-in pieces (legs & thighs) — 800g","Preserved lemon — 1 (rind finely diced)","Pitted green Moroccan olives — ¾ cup rinsed","Yellow onion — 2 finely grated or chopped","Garlic cloves — 4 minced","Ground ginger & cumin — 1 tsp each","Turmeric & Saffron strands — ½ tsp each","Coriander & flat-leaf parsley — ½ cup chopped","Olive oil — 3 tbsp"],steps:["In a tagine or heavy Dutch oven, heat olive oil over medium heat.","Add grated onions, minced garlic, ginger, turmeric, cumin, and steeped saffron. Sauté for 3 minutes until aromatic.","Add chicken pieces and sear on all sides for 8 minutes to absorb the fragrant spices.","Pour in 1 cup of warm water and half the chopped herbs. Bring to a simmer.","Cover tightly with lid, reduce heat to low, and braise gently for 35 minutes until chicken is meltingly tender.","Add diced preserved lemon rind and green olives. Simmer uncovered for 8-10 minutes until the sauce reduces to a thick, glossy consistency.","Garnish with fresh coriander and serve warm with crusty Moroccan bread or fluffy couscous."]}
 ];
 
 const grid=document.getElementById("recipeGrid"),search=document.getElementById("searchInput"),modal=document.getElementById("recipeModal"),modalContent=document.getElementById("modalContent"),toast=document.getElementById("toast");
 
 function render(list=recipes){
+  if (!grid) return;
   grid.innerHTML="";
   if(!list.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:55px;color:var(--muted)"><h3>No recipes found</h3><p>Try another search or category.</p></div>';return}
   list.forEach(r=>{
     const card=document.createElement("article");card.className="recipe-card";
     card.innerHTML=`<div class="recipe-photo"><img src="${r.image}" alt="${r.name}" loading="lazy"><button class="favorite" aria-label="Favorite">♡</button></div><div class="recipe-body"><h3>${r.name}</h3><p>${r.description}</p><div class="recipe-meta"><span>⏱ ${r.time}</span><span>★ ${r.rating}</span><span>${r.difficulty}</span></div><button class="recipe-button">View recipe</button></div>`;
-    card.querySelector(".favorite").addEventListener("click",e=>{e.stopPropagation();const b=e.currentTarget;b.classList.toggle("active");b.textContent=b.classList.contains("active")?"♥":"♡";});
-    card.querySelector(".recipe-button").addEventListener("click",()=>openRecipe(r.id));
+    card.querySelector(".favorite")?.addEventListener("click",e=>{e.stopPropagation();const b=e.currentTarget;b.classList.toggle("active");b.textContent=b.classList.contains("active")?"♥":"♡";});
+    card.querySelector(".recipe-button")?.addEventListener("click",()=>openRecipe(r.id));
     grid.appendChild(card);
   });
 }
 function filter(q){
-  q=q.toLowerCase().trim();
+  q=(q || "").toLowerCase().trim();
   const list=recipes.filter(r=>(r.name+" "+r.category+" "+r.description).toLowerCase().includes(q));
-  render(list);document.getElementById("recipes").scrollIntoView({behavior:"smooth"});
+  if (grid) render(list);
+  const recEl = document.getElementById("recipes");
+  if (recEl) {
+    recEl.scrollIntoView({behavior:"smooth"});
+  }
 }
-document.getElementById("searchBtn").onclick=()=>filter(search.value);
-search.addEventListener("keydown",e=>{if(e.key==="Enter")filter(search.value)});
-document.querySelectorAll("[data-search]").forEach(b=>b.onclick=()=>{search.value=b.dataset.search;filter(search.value)});
-document.querySelectorAll("[data-category]").forEach(b=>b.onclick=()=>{render(recipes.filter(r=>r.category===b.dataset.category));document.getElementById("recipes").scrollIntoView({behavior:"smooth"})});
-document.getElementById("clearFilter").onclick=()=>{search.value="";render(recipes);document.getElementById("recipes").scrollIntoView({behavior:"smooth"})};
+const sBtn = document.getElementById("searchBtn");
+if (sBtn && search) {
+  sBtn.onclick=()=>filter(search.value);
+}
+if (search) {
+  search.addEventListener("keydown",e=>{if(e.key==="Enter")filter(search.value)});
+}
+document.querySelectorAll("[data-search]").forEach(b=>b.onclick=()=>{if(search) search.value=b.dataset.search;filter(b.dataset.search)});
+document.querySelectorAll("[data-category]").forEach(b => {
+  b.onclick = () => {
+    const cat = encodeURIComponent(b.dataset.category);
+    window.location.href = `recipes.html?category=${cat}`;
+  };
+  b.onkeydown = (e) => {
+    if (e.key === "Enter") {
+      const cat = encodeURIComponent(b.dataset.category);
+      window.location.href = `recipes.html?category=${cat}`;
+    }
+  };
+});
+const viewAllLink = document.getElementById("viewAllRecipes") || document.getElementById("clearFilter");
+if (viewAllLink) {
+  viewAllLink.onclick = (e) => {
+    // Navigate to recipes page
+    window.location.href = "recipes.html";
+  };
+}
 
 function openRecipe(id){
-  const r=recipes.find(x=>x.id===id);if(!r)return;
-  modalContent.innerHTML=`<div class="modal-hero"><img src="${r.image}" alt="${r.name}"></div><div class="eyebrow">${r.category.toUpperCase()} • ★ ${r.rating} • ${r.time}</div><h2>${r.name}</h2><p style="color:var(--muted);margin-top:7px">${r.description}</p><h3>Ingredients</h3><ul>${r.ingredients.map(x=>`<li>${x}</li>`).join("")}</ul><h3>How to make it</h3><ol>${r.steps.map(x=>`<li>${x}</li>`).join("")}</ol><button class="copy-btn" onclick="copyRecipe(${r.id})">Copy recipe</button>`;
-  modal.classList.add("show");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
+  const r = recipes.find(x => x.id === id);
+  if (!r || !modalContent || !modal) return;
+
+  window.currentRecipeModal = r;
+  window.currentServingsMultiplier = 1;
+
+  renderModalRecipeContent(r, 1);
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 }
-function closeModal(){modal.classList.remove("show");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""}
-document.getElementById("closeModal").onclick=closeModal;
-modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+
+function renderModalRecipeContent(r, multiplier) {
+  const scaledIngredients = r.ingredients.map(ing => {
+    if (multiplier === 1) return ing;
+    return ing.replace(/^([\d\/\.\s]+)/, (match) => {
+      let val = 0;
+      if (match.includes('/')) {
+        const parts = match.trim().split('/');
+        val = parseFloat(parts[0]) / parseFloat(parts[1]);
+      } else {
+        val = parseFloat(match);
+      }
+      if (isNaN(val)) return match;
+      const scaled = Math.round(val * multiplier * 10) / 10;
+      return `${scaled} `;
+    });
+  });
+
+  modalContent.innerHTML = `
+    <div class="modal-hero">
+      <img src="${r.image}" alt="${r.name}">
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-top:14px;">
+      <div class="eyebrow" style="margin-bottom:0;">${r.category.toUpperCase()} • ★ ${r.rating} • ⏱ ${r.time}</div>
+      <span class="badge" style="background:var(--accent-soft); color:var(--accent); font-weight:700; font-size:12px; padding:4px 10px; border-radius:999px;">Chef Tested</span>
+    </div>
+    <h2 style="font-family:'Playfair Display',serif; font-size:28px; margin-top:8px;">${r.name}</h2>
+    <p style="color:var(--muted); margin-top:8px; line-height:1.6;">${r.description}</p>
+    
+    <div style="display:flex; align-items:center; justify-content:space-between; background:var(--bg-soft); padding:10px 16px; border-radius:12px; margin:16px 0; border:1px solid var(--line); flex-wrap:wrap; gap:10px;">
+      <span style="font-size:14px; font-weight:600; color:var(--fg);">Yield / Servings:</span>
+      <div style="display:flex; gap:6px;">
+        <button type="button" class="btn" style="padding:4px 10px; font-size:12px; border-radius:8px; ${multiplier === 0.5 ? 'background:var(--accent); color:#fff;' : 'background:var(--card); color:var(--fg); border:1px solid var(--line);'}" onclick="changeServings(0.5)">2 servings</button>
+        <button type="button" class="btn" style="padding:4px 10px; font-size:12px; border-radius:8px; ${multiplier === 1 ? 'background:var(--accent); color:#fff;' : 'background:var(--card); color:var(--fg); border:1px solid var(--line);'}" onclick="changeServings(1)">4 servings (standard)</button>
+        <button type="button" class="btn" style="padding:4px 10px; font-size:12px; border-radius:8px; ${multiplier === 1.5 ? 'background:var(--accent); color:#fff;' : 'background:var(--card); color:var(--fg); border:1px solid var(--line);'}" onclick="changeServings(1.5)">6 servings</button>
+        <button type="button" class="btn" style="padding:4px 10px; font-size:12px; border-radius:8px; ${multiplier === 2 ? 'background:var(--accent); color:#fff;' : 'background:var(--card); color:var(--fg); border:1px solid var(--line);'}" onclick="changeServings(2)">8 servings</button>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Playfair Display',serif; font-size:20px; margin-top:16px; border-bottom:1px solid var(--line); padding-bottom:6px;">Ingredients</h3>
+    <ul style="margin-top:10px; padding-left:20px; line-height:1.7; color:var(--fg);">
+      ${scaledIngredients.map(x => `<li>${x}</li>`).join("")}
+    </ul>
+
+    <h3 style="font-family:'Playfair Display',serif; font-size:20px; margin-top:20px; border-bottom:1px solid var(--line); padding-bottom:6px;">Step-by-Step Instructions</h3>
+    <ol style="margin-top:10px; padding-left:20px; line-height:1.7; color:var(--fg);">
+      ${r.steps.map(x => `<li>${x}</li>`).join("")}
+    </ol>
+
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:24px; padding-top:16px; border-top:1px solid var(--line);">
+      <button class="btn btn-primary" onclick="copyRecipe(${r.id})" style="flex:1; min-width:140px;">📋 Copy Recipe</button>
+      <button class="btn" onclick="window.print()" style="flex:1; min-width:140px; background:var(--card); border:1px solid var(--line); color:var(--fg);">🖨️ Print Recipe</button>
+      <button class="btn" onclick="shareRecipe(${r.id})" style="flex:1; min-width:140px; background:var(--card); border:1px solid var(--line); color:var(--fg);">🔗 Share Recipe</button>
+    </div>
+  `;
+}
+
+function changeServings(multiplier) {
+  if (!window.currentRecipeModal) return;
+  window.currentServingsMultiplier = multiplier;
+  renderModalRecipeContent(window.currentRecipeModal, multiplier);
+}
+
+function shareRecipe(id) {
+  const r = recipes.find(x => x.id === id);
+  if (!r) return;
+  const shareUrl = `${window.location.origin}/recipes.html?search=${encodeURIComponent(r.name)}`;
+  if (navigator.share) {
+    navigator.share({
+      title: `${r.name} - FlavorNest`,
+      text: `Check out this delicious recipe for ${r.name} on FlavorNest!`,
+      url: shareUrl
+    }).catch(() => {
+      navigator.clipboard?.writeText(shareUrl).then(() => showToast("Recipe URL copied to clipboard!"));
+    });
+  } else {
+    navigator.clipboard?.writeText(shareUrl).then(() => showToast("Recipe URL copied to clipboard!"));
+  }
+}
+
+function closeModal(){
+  if (!modal) return;
+  modal.classList.remove("show");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""
+}
+const closeBtn = document.getElementById("closeModal");
+if (closeBtn) closeBtn.onclick=closeModal;
+if (modal) {
+  modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+}
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
 function copyRecipe(id){
   const r=recipes.find(x=>x.id===id);
-  const text=`${r.name}\n\nIngredients:\n${r.ingredients.join("\n")}\n\nInstructions:\n${r.steps.map((x,i)=>`${i+1}. ${x}`).join("\n")}`;
-  navigator.clipboard?.writeText(text).then(()=>showToast("Recipe copied!"));
+  if (!r) return;
+  const text=`${r.name}\n\nIngredients:\n${r.ingredients.join("\n")}\n\nInstructions:\n${r.steps.map((x,i)=>`${i+1}. ${x}`).join("\n")}\n\nVia FlavorNest Culinary Website`;
+  navigator.clipboard?.writeText(text).then(()=>showToast("Recipe copied to clipboard!"));
 }
-function showToast(msg){toast.textContent=msg;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)}
+function showToast(msg){
+  if (!toast) return;
+  toast.textContent=msg;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),2200)
+}
 
-document.getElementById("themeBtn").onclick=()=>{
+const sidebarDrawer = document.getElementById("sidebarDrawer");
+const sidebarBackdrop = document.getElementById("sidebarBackdrop");
+const sidebarToggleBtn = document.getElementById("sidebarToggleBtn");
+const sidebarCloseBtn = document.getElementById("sidebarCloseBtn");
+
+function openSidebar() {
+  if (sidebarDrawer) sidebarDrawer.classList.add("open");
+  if (sidebarBackdrop) sidebarBackdrop.classList.add("show");
+  if (sidebarDrawer) sidebarDrawer.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  if (sidebarDrawer) sidebarDrawer.classList.remove("open");
+  if (sidebarBackdrop) sidebarBackdrop.classList.remove("show");
+  if (sidebarDrawer) sidebarDrawer.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+if (sidebarToggleBtn) {
+  sidebarToggleBtn.onclick = openSidebar;
+}
+if (sidebarCloseBtn) {
+  sidebarCloseBtn.onclick = closeSidebar;
+}
+if (sidebarBackdrop) {
+  sidebarBackdrop.onclick = closeSidebar;
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeSidebar();
+  }
+});
+
+// Sidebar search handler
+const sidebarSearchInput = document.getElementById("sidebarSearchInput");
+if (sidebarSearchInput) {
+  sidebarSearchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && sidebarSearchInput.value.trim()) {
+      const q = encodeURIComponent(sidebarSearchInput.value.trim());
+      closeSidebar();
+      window.location.href = `recipes.html?search=${q}`;
+    }
+  });
+}
+
+// Sidebar surprise recipe button
+const sidebarSurpriseBtn = document.getElementById("sidebarSurpriseBtn");
+if (sidebarSurpriseBtn) {
+  sidebarSurpriseBtn.onclick = () => {
+    closeSidebar();
+    const randomRecipe = recipes[Math.floor(Math.random() * recipes.length)];
+    if (randomRecipe) {
+      if (window.location.pathname.includes("recipes.html") || window.location.pathname.includes("index.html") || window.location.pathname === "/" || window.location.pathname === "") {
+        openRecipe(randomRecipe.id);
+      } else {
+        window.location.href = `recipes.html?category=${encodeURIComponent(randomRecipe.category)}`;
+      }
+    }
+  };
+}
+
+// Theme helper that updates both header and sidebar toggles
+function updateThemeUI(isDark) {
+  const tBtn = document.getElementById("themeBtn");
+  const sIcon = document.getElementById("sidebarThemeIcon");
+  const sLabel = document.getElementById("sidebarThemeLabel");
+  if (tBtn) tBtn.textContent = isDark ? "☀" : "☾";
+  if (sIcon) sIcon.textContent = isDark ? "☀" : "☾";
+  if (sLabel) sLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
+}
+
+const themeBtn = document.getElementById("themeBtn");
+const sidebarThemeToggleBtn = document.getElementById("sidebarThemeToggleBtn");
+
+function toggleTheme() {
   document.body.classList.toggle("dark");
-  const dark=document.body.classList.contains("dark");
-  document.getElementById("themeBtn").textContent=dark?"☀":"☾";
-  localStorage.setItem("flavorDark",dark?"1":"0");
-};
-if(localStorage.getItem("flavorDark")==="1"){document.body.classList.add("dark");document.getElementById("themeBtn").textContent="☀"}
+  const dark = document.body.classList.contains("dark");
+  updateThemeUI(dark);
+  localStorage.setItem("flavorDark", dark ? "1" : "0");
+}
 
-document.getElementById("menuBtn").onclick=()=>document.getElementById("navLinks").classList.toggle("active");
-document.querySelectorAll(".nav-links a").forEach(a=>a.onclick=()=>document.getElementById("navLinks").classList.remove("active"));
+if (themeBtn) themeBtn.onclick = toggleTheme;
+if (sidebarThemeToggleBtn) sidebarThemeToggleBtn.onclick = toggleTheme;
 
-document.getElementById("newsletterForm").onsubmit=e=>{
-  e.preventDefault();document.getElementById("emailInput").value="";showToast("Thanks for subscribing! ♥");
-};
+if (localStorage.getItem("flavorDark") === "1") {
+  document.body.classList.add("dark");
+  updateThemeUI(true);
+} else {
+  updateThemeUI(false);
+}
 
-render();
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+if (menuBtn && navLinks) {
+  menuBtn.onclick=()=>navLinks.classList.toggle("active");
+  document.querySelectorAll(".nav-links a").forEach(a=>a.onclick=()=>navLinks.classList.remove("active"));
+}
+
+const newsletterForm = document.getElementById("newsletterForm");
+if (newsletterForm) {
+  newsletterForm.onsubmit=e=>{
+    e.preventDefault();
+    const emailInput = document.getElementById("emailInput");
+    if (emailInput) emailInput.value="";
+    showToast("Thanks for subscribing! ♥");
+  };
+}
+
+document.querySelectorAll(".brand").forEach(b => {
+  b.onclick = () => {
+    window.location.href = "index.html";
+  };
+});
+
+// Update sidebar badges with total count
+document.querySelectorAll(".sidebar-badge").forEach(badge => {
+  badge.textContent = `${recipes.length}`;
+});
+
+// Announcement bar dismiss handler
+const closeAnnouncement = document.getElementById("closeAnnouncement");
+const announcementBar = document.getElementById("announcementBar");
+if (closeAnnouncement && announcementBar) {
+  closeAnnouncement.onclick = () => {
+    announcementBar.style.display = "none";
+    sessionStorage.setItem("flavorAnnouncementDismissed", "1");
+  };
+  if (sessionStorage.getItem("flavorAnnouncementDismissed") === "1") {
+    announcementBar.style.display = "none";
+  }
+}
+
+if (grid) {
+  render();
+}

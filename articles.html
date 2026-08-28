@@ -3,118 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore delicious recipes on FlavorNest - Pakistani, Chicken, Fast Food, Desserts, Breakfast, and Healthy.">
-  <title>All Recipes — FlavorNest</title>
+  <meta name="description" content="FlavorNest Culinary Guides - Expert kitchen tips, secret spice pairings, and food stories.">
+  <title>Culinary Guides & Kitchen Tips — FlavorNest</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .recipes-page-hero {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px 20px 25px;
-    }
-    .recipes-page-hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 5vw, 52px);
-      margin: 10px 0 14px;
-    }
-    .recipes-page-hero p {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.6;
-    }
-    .search-bar-container {
-      max-width: 600px;
-      margin: 25px auto 0;
-      display: flex;
-      gap: 10px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      padding: 6px;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-    }
-    .search-bar-container input {
-      flex: 1;
-      border: 0;
-      background: transparent;
-      outline: 0;
-      padding: 10px 18px;
-      font-size: 15px;
-      color: var(--text);
-      font-family: inherit;
-    }
-    .search-bar-container button {
-      background: var(--accent);
-      color: white;
-      border: 0;
-      border-radius: 999px;
-      padding: 0 24px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: opacity 0.2s;
-    }
-    .search-bar-container button:hover {
-      opacity: 0.9;
-    }
-    .filter-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      max-width: 1000px;
-      margin: 30px auto 35px;
-      padding: 0 20px;
-    }
-    .filter-pill {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      color: var(--text);
-      padding: 8px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .filter-pill:hover,
-    .filter-pill.active {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-    .recipes-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
-    }
-    .results-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
-    }
-    .results-header h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 28px;
-    }
-    .results-count {
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-  </style>
 </head>
 <body>
 
 <!-- Top Announcement Bar -->
 <div class="announcement-bar" id="announcementBar">
-  <span>✨ Browse our collection of 60+ chef-tested culinary creations! <a href="articles.html">Read Cooking Guides →</a></span>
+  <span>✨ Explore 60+ chef-tested recipes & culinary techniques! <a href="recipes.html">Browse Catalog →</a></span>
   <button class="announcement-close" id="closeAnnouncement" aria-label="Close notification">✕</button>
 </div>
 
@@ -134,8 +34,8 @@
     <div class="sidebar-section-title">MAIN NAVIGATION</div>
     <ul class="sidebar-menu">
       <li><a href="index.html" class="sidebar-link"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
-      <li><a href="recipes.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
-      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
+      <li><a href="articles.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
       <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
       <li><a href="contact.html" class="sidebar-link"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
       <li><a href="privacy.html" class="sidebar-link"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
@@ -180,8 +80,8 @@
     </div>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="recipes.html" style="color: var(--accent); font-weight: 700;">Recipes</a>
-      <a href="articles.html">Culinary Guides</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="articles.html" style="color: var(--accent); font-weight: 700;">Culinary Guides</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
       <a href="privacy.html">Privacy Policy</a>
@@ -194,35 +94,119 @@
 </header>
 
 <main>
-  <div class="recipes-page-hero">
-    <div class="eyebrow">OUR RECIPE VAULT</div>
-    <h1>Explore All Recipes</h1>
-    <p>Handpicked flavorful dishes, step-by-step instructions, and authentic spices ready for your kitchen.</p>
-
-    <div class="search-bar-container">
-      <input type="search" id="searchInput" placeholder="Search by name, ingredient, or craving..." autocomplete="off">
-      <button id="searchBtn">Search</button>
-    </div>
-  </div>
-
-  <div class="filter-pills" id="filterPills">
-    <button class="filter-pill active" data-cat="all">All Recipes</button>
-    <button class="filter-pill" data-cat="Pakistani">🍛 Pakistani</button>
-    <button class="filter-pill" data-cat="Chicken">🍗 Chicken</button>
-    <button class="filter-pill" data-cat="Fast Food">🍔 Fast Food</button>
-    <button class="filter-pill" data-cat="Dessert">🍰 Desserts</button>
-    <button class="filter-pill" data-cat="Breakfast">🥞 Breakfast</button>
-    <button class="filter-pill" data-cat="Healthy">🥗 Healthy</button>
-  </div>
-
-  <div class="recipes-container">
-    <div class="results-header">
-      <h2 id="sectionTitle">All Recipes</h2>
-      <span class="results-count" id="recipeCount">60 recipes</span>
+  <section class="section" style="padding-bottom: 20px;">
+    <div class="section-head">
+      <span class="eyebrow">EDITORIAL & SECRETS</span>
+      <h1>Culinary Guides & Kitchen Tips</h1>
+      <p style="color: var(--muted); font-size: 16px; margin-top: 8px; max-width: 650px;">
+        Master the techniques behind unforgettable flavors. From authentic spice roasting to achieving golden crispiness in home ovens.
+      </p>
     </div>
 
-    <div class="recipe-grid" id="recipeGrid"></div>
-  </div>
+    <div class="articles-grid">
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85" alt="Spices">
+          <span class="article-tag">Techniques</span>
+        </div>
+        <div class="article-body">
+          <h3>The Master Guide to South Asian Spices & Aromatics</h3>
+          <p>Learn when to bloom whole seeds in hot ghee (Tarka) versus when to add slow-roasted ground masalas for deeply nuanced curries.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Ayesha • 6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
+          <span class="article-tag">Crispy Mastery</span>
+        </div>
+        <div class="article-body">
+          <h3>5 Essential Secrets for Restaurant-Quality French Fries</h3>
+          <p>Why soaking in ice water to remove starch and the double-fry temperature method is the key to shoestring perfection.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👨‍🍳</span>
+            <span>Chef Daniyal • 4 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=900&q=85" alt="Poached eggs">
+          <span class="article-tag">Breakfast Science</span>
+        </div>
+        <div class="article-body">
+          <h3>The Art of the Flawless Poached Egg for Benedict & Shakshuka</h3>
+          <p>A gentle vinegar whirlpool and fresh farm eggs ensure tender, velvet whites that cradle a golden runny yolk every single time.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Maria • 5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Dough and baking">
+          <span class="article-tag">Baking</span>
+        </div>
+        <div class="article-body">
+          <h3>Understanding Yeast & Fermentation for Fluffy Breads</h3>
+          <p>How temperature, hydration ratios, and patience turn simple flour into pillowy brioche, naan, and artisan pizza crusts.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👨‍🍳</span>
+            <span>Baker Tariq • 7 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Slow cooking">
+          <span class="article-tag">Slow Cooking</span>
+        </div>
+        <div class="article-body">
+          <h3>The Science of Dum Cooking: Sealing Steam & Flavors</h3>
+          <p>Discover the ancient technique of slow-trapping steam in heavy vessels to tenderize meats and infuse aromatic grains.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Ayesha • 5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85" alt="Healthy salads">
+          <span class="article-tag">Healthy Living</span>
+        </div>
+        <div class="article-body">
+          <h3>Building Balanced Power Bowls that Keep You Energized</h3>
+          <p>A simple 4-part framework: grains, roasted protein, hearty greens, and emulsified acid dressings for vibrant weekday lunches.</p>
+          <div class="article-meta">
+            <span class="author-avatar">🥗</span>
+            <span>Nutritionist Sana • 4 min read</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="newsletter section" style="margin-top: 40px;">
+    <div>
+      <span class="eyebrow">NEVER MISS A GUIDE</span>
+      <h2>Get new kitchen tips & recipes every Thursday.</h2>
+      <p>Join over 35,000 home chefs refining their craft.</p>
+    </div>
+    <form id="newsletterForm">
+      <input id="emailInput" type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe Free</button>
+    </form>
+  </section>
 </main>
 
 <footer>
@@ -286,77 +270,6 @@
 </div>
 
 <div class="toast" id="toast"></div>
-
 <script src="script.js"></script>
-<script>
-  // Sync page specific filter pills
-  const pills = document.querySelectorAll(".filter-pill");
-  const countEl = document.getElementById("recipeCount");
-  const titleEl = document.getElementById("sectionTitle");
-
-  // Read URL params
-  const urlParams = new URLSearchParams(window.location.search);
-  const initialCategory = urlParams.get("category");
-  const initialSearch = urlParams.get("search");
-
-  let activeCategory = "all";
-
-  // Match and activate the initial category from URL
-  if (initialCategory) {
-    pills.forEach(p => {
-      if (p.dataset.cat.toLowerCase() === initialCategory.toLowerCase()) {
-        pills.forEach(pill => pill.classList.remove("active"));
-        p.classList.add("active");
-        activeCategory = p.dataset.cat;
-      }
-    });
-  }
-
-  if (initialSearch) {
-    const searchInput = document.getElementById("searchInput");
-    if (searchInput) searchInput.value = initialSearch;
-  }
-
-  function applyPageFilter() {
-    const q = (document.getElementById("searchInput").value || "").toLowerCase().trim();
-    let filtered = recipes;
-
-    if (activeCategory !== "all") {
-      filtered = filtered.filter(r => r.category.toLowerCase() === activeCategory.toLowerCase());
-      titleEl.textContent = `Recommended ${activeCategory} Recipes`;
-    } else {
-      titleEl.textContent = "All Recipes";
-    }
-
-    if (q) {
-      filtered = filtered.filter(r => (r.name + " " + r.category + " " + r.description + " " + r.ingredients.join(" ")).toLowerCase().includes(q));
-      if (activeCategory !== "all") {
-        titleEl.textContent = `${activeCategory} Results for "${document.getElementById("searchInput").value.trim()}"`;
-      } else {
-        titleEl.textContent = `Search Results for "${document.getElementById("searchInput").value.trim()}"`;
-      }
-    }
-
-    render(filtered);
-    countEl.textContent = `${filtered.length} recipe${filtered.length === 1 ? '' : 's'}`;
-  }
-
-  pills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      pills.forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-      activeCategory = pill.dataset.cat;
-      const newUrl = activeCategory === "all" ? "recipes.html" : `recipes.html?category=${encodeURIComponent(activeCategory)}`;
-      window.history.replaceState({}, "", newUrl);
-      applyPageFilter();
-    });
-  });
-
-  document.getElementById("searchInput").addEventListener("input", applyPageFilter);
-  document.getElementById("searchBtn").addEventListener("click", applyPageFilter);
-
-  // Initial filter run on page load
-  applyPageFilter();
-</script>
 </body>
 </html>

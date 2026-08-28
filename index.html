@@ -1,12 +1,13 @@
-</nav><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FlavorNest - beautiful and easy cooking recipes.">
-  <title>FlavorNest — Delicious Recipes</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2652605756698756"
-     crossorigin="anonymous"></script>
+  <meta name="description" content="FlavorNest - A premier culinary website featuring 60+ chef-crafted recipes, cooking guides, categories, and culinary inspiration.">
+  <meta property="og:title" content="FlavorNest — Culinary Recipes & Kitchen Inspiration">
+  <meta property="og:description" content="Explore chef-tested recipes, kitchen tips, and easy weeknight meals across Pakistani, Chicken, Fast Food, and Desserts.">
+  <meta property="og:type" content="website">
+  <title>FlavorNest — Delicious Recipes & Culinary Inspiration</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -14,14 +15,79 @@
 </head>
 <body>
 
+<!-- Top Announcement Bar -->
+<div class="announcement-bar" id="announcementBar">
+  <span>✨ Discover 60+ chef-tested recipes & culinary techniques! <a href="recipes.html">Explore Catalog →</a></span>
+  <button class="announcement-close" id="closeAnnouncement" aria-label="Close notification">✕</button>
+</div>
+
+<!-- Top Left Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-hidden="true">
+  <div class="sidebar-header">
+    <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close sidebar">✕</button>
+  </div>
+
+  <div class="sidebar-search-box">
+    <span>⌕</span>
+    <input type="text" id="sidebarSearchInput" placeholder="Quick search recipes..." autocomplete="off">
+  </div>
+
+  <div class="sidebar-content">
+    <div class="sidebar-section-title">MAIN NAVIGATION</div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
+      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
+      <li><a href="contact.html" class="sidebar-link"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
+      <li><a href="privacy.html" class="sidebar-link"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">BROWSE CATEGORIES</div>
+    <ul class="sidebar-menu">
+      <li><a href="recipes.html?category=Fast+Food" class="sidebar-link"><span class="sidebar-icon">🍔</span> <span>Fast Food</span> <small class="sidebar-subtext">Burgers & Wings</small></a></li>
+      <li><a href="recipes.html?category=Pakistani" class="sidebar-link"><span class="sidebar-icon">🍛</span> <span>Pakistani</span> <small class="sidebar-subtext">Biryani & Nihari</small></a></li>
+      <li><a href="recipes.html?category=Chicken" class="sidebar-link"><span class="sidebar-icon">🍗</span> <span>Chicken Specials</span> <small class="sidebar-subtext">Tikka & Karahi</small></a></li>
+      <li><a href="recipes.html?category=Dessert" class="sidebar-link"><span class="sidebar-icon">🍰</span> <span>Desserts & Sweets</span> <small class="sidebar-subtext">Gulab Jamun & Donuts</small></a></li>
+      <li><a href="recipes.html?category=Breakfast" class="sidebar-link"><span class="sidebar-icon">🥞</span> <span>Breakfast & Brunch</span> <small class="sidebar-subtext">Pancakes & Toast</small></a></li>
+      <li><a href="recipes.html?category=Healthy" class="sidebar-link"><span class="sidebar-icon">🥗</span> <span>Healthy & Salads</span> <small class="sidebar-subtext">Quinoa & Greens</small></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">DISCOVER & ACTIONS</div>
+    <ul class="sidebar-menu">
+      <li>
+        <button class="sidebar-action-btn" id="sidebarSurpriseBtn">
+          <span class="sidebar-icon">🎲</span> <span>Surprise Recipe</span>
+        </button>
+      </li>
+      <li>
+        <button class="sidebar-action-btn" id="sidebarThemeToggleBtn">
+          <span class="sidebar-icon" id="sidebarThemeIcon">☾</span> <span id="sidebarThemeLabel">Dark Mode</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <p>© 2026 FlavorNest • Made with ♥</p>
+  </div>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
 <header class="site-header">
   <nav class="navbar">
-    <a class="brand" href="#home"><span>F</span> FlavorNest</a>
+    <div class="navbar-left">
+      <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Open sidebar menu">☰</button>
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    </div>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="contact.html">Contact Us</a>
-<a href="privacy.html">Privacy Policy</a>
+      <a href="index.html" style="color: var(--accent); font-weight: 700;">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="articles.html">Culinary Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
     <div class="nav-actions">
       <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
@@ -33,53 +99,56 @@
 <main id="home">
   <section class="hero">
     <div class="hero-copy">
-      <div class="eyebrow">GOOD FOOD • GOOD MOOD</div>
+      <div class="eyebrow">CHEF-CRAFTED RECIPES & FOOD STORIES</div>
       <h1>Cook something<br><em>delicious</em> today.</h1>
-      <p>Easy, flavorful recipes made for busy days, family dinners and every little craving.</p>
+      <p>FlavorNest is your trusted culinary website with 60+ easy, flavorful recipes made for busy weeknights, family feasts, and dessert lovers.</p>
       <div class="hero-search">
         <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Search biryani, pasta, cake..." autocomplete="off">
+        <input id="searchInput" type="search" placeholder="Search biryani, pizza, kheer, tacos..." autocomplete="off">
         <button id="searchBtn">Find Recipe</button>
       </div>
       <div class="quick-tags">
-        <span>Popular:</span>
+        <span>Popular searches:</span>
         <button data-search="Biryani">Biryani</button>
-        <button data-search="Chicken">Chicken</button>
-        <button data-search="Pasta">Pasta</button>
-        <button data-search="Dessert">Dessert</button>
+        <button data-search="Butter Chicken">Butter Chicken</button>
+        <button data-search="Tuscan Chicken">Tuscan Chicken</button>
+        <button data-search="Chicken Alfredo">Alfredo</button>
+        <button data-search="Chicken Katsu">Katsu Curry</button>
+        <button data-search="Pizza">Pizza</button>
+        <button data-search="Brownies">Brownies</button>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-image-wrap">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Beautiful food table">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Beautiful culinary spread">
         <div class="floating-card">
           <div class="mini-avatar">👩‍🍳</div>
-          <div><strong>Today's pick</strong><small>Spicy Chicken Biryani</small></div>
+          <div><strong>Today's pick</strong><small>Royal Mutton Yakhni Pulao</small></div>
           <span class="heart">♥</span>
         </div>
       </div>
-      <div class="hero-sticker">100+<small>easy recipes</small></div>
+      <div class="hero-sticker">60+<small>curated recipes</small></div>
     </div>
   </section>
 
   <section class="categories section" id="categories">
     <div class="section-head">
-      <div><span class="eyebrow">EXPLORE</span><h2>What are you craving?</h2></div>
+      <div><span class="eyebrow">EXPLORE BY CUISINE</span><h2>What are you craving?</h2></div>
     </div>
     <div class="category-grid">
       <button class="category" data-category="Pakistani"><span>🍛</span><strong>Pakistani</strong><small>Desi favorites</small></button>
-      <button class="category" data-category="Chicken"><span>🍗</span><strong>Chicken</strong><small>Juicy & spicy</small></button>
-      <button class="category" data-category="Fast Food"><span>🍔</span><strong>Fast Food</strong><small>Quick bites</small></button>
+      <button class="category" data-category="Chicken"><span>🍗</span><strong>Chicken</strong><small>Juicy & specialty dishes</small></button>
+      <button class="category" data-category="Fast Food"><span>🍔</span><strong>Fast Food</strong><small>Burgers & Wings</small></button>
       <button class="category" data-category="Dessert"><span>🍰</span><strong>Desserts</strong><small>Sweet treats</small></button>
-      <button class="category" data-category="Healthy"><span>🥗</span><strong>Healthy</strong><small>Fresh choices</small></button>
-      <button class="category" data-category="Breakfast"><span>🥞</span><strong>Breakfast</strong><small>Start right</small></button>
+      <button class="category" data-category="Healthy"><span>🥗</span><strong>Healthy</strong><small>Fresh power bowls</small></button>
+      <button class="category" data-category="Breakfast"><span>🥞</span><strong>Breakfast</strong><small>Brunch & energy</small></button>
     </div>
   </section>
 
   <section class="section" id="recipes">
     <div class="section-head row">
-      <div><span class="eyebrow">OUR FAVORITES</span><h2>Popular recipes</h2></div>
-      <button class="text-btn" id="clearFilter">View all recipes →</button>
+      <div><span class="eyebrow">OUR FAVORITES</span><h2>Popular & Trending Recipes</h2></div>
+      <a href="recipes.html" class="text-btn" id="viewAllRecipes">View full catalog (60) →</a>
     </div>
     <div class="recipe-grid" id="recipeGrid"></div>
   </section>
@@ -92,30 +161,192 @@
     <div class="featured-copy">
       <span class="eyebrow">CHEF'S CHOICE</span>
       <h2>Spicy Chicken Biryani</h2>
-      <p>Fragrant basmati rice, tender chicken and bold Pakistani spices layered together for the ultimate comfort meal.</p>
-      <div class="stats"><span>★ 4.9</span><span>⏱ 60 min</span><span>🔥 Medium</span></div>
-      <button class="primary" onclick="openRecipe(1)">See full recipe</button>
+      <p>Fragrant aged basmati rice, succulent spiced chicken, caramelized onions, and whole aromatic spices layered together for the royal Pakistani feast.</p>
+      <div class="stats"><span>★ 5.0</span><span>⏱ 60 min</span><span>🔥 Medium</span></div>
+      <button class="primary" onclick="openRecipe(1)">View Step-by-Step Recipe</button>
+    </div>
+  </section>
+
+  <!-- Culinary Guides & Articles Preview -->
+  <section class="section" id="culinaryGuides">
+    <div class="section-head row">
+      <div>
+        <span class="eyebrow">KITCHEN KNOWLEDGE</span>
+        <h2>Culinary Guides & Kitchen Tips</h2>
+      </div>
+      <a href="articles.html" class="text-btn">Read all guides →</a>
+    </div>
+    <div class="articles-grid">
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85" alt="Spices">
+          <span class="article-tag">Techniques</span>
+        </div>
+        <div class="article-body">
+          <h3>The Master Guide to South Asian Spices & Aromatics</h3>
+          <p>Learn when to bloom whole seeds in hot ghee (Tarka) versus when to add slow-roasted ground masalas for deeply nuanced curries.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Ayesha • 6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
+          <span class="article-tag">Crispy Mastery</span>
+        </div>
+        <div class="article-body">
+          <h3>5 Essential Secrets for Restaurant-Quality French Fries</h3>
+          <p>Why soaking in ice water to remove starch and the double-fry temperature method is the key to shoestring perfection.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👨‍🍳</span>
+            <span>Chef Daniyal • 4 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=900&q=85" alt="Poached eggs">
+          <span class="article-tag">Breakfast Science</span>
+        </div>
+        <div class="article-body">
+          <h3>The Art of the Flawless Poached Egg for Benedict & Shakshuka</h3>
+          <p>A gentle vinegar whirlpool and fresh farm eggs ensure tender, velvet whites that cradle a golden runny yolk every single time.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Maria • 5 min read</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Community Testimonials Section -->
+  <section class="section" id="communityReviews" style="padding-top: 20px;">
+    <div class="section-head">
+      <span class="eyebrow">COMMUNITY PRAISE</span>
+      <h2>Loved by Home Cooks Worldwide</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Spicy Chicken Biryani recipe is foolproof. The dum instructions gave me restaurant-level separation of grains and incredible fragrance!"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👩</div>
+          <div class="testimonial-info">
+            <strong>Zainab K.</strong>
+            <small>London, UK</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Zinger Crunch Chicken Burger is pure magic. So much crunchier and more flavorful than fast food takeout!"</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👨</div>
+          <div class="testimonial-info">
+            <strong>Bilal M.</strong>
+            <small>Lahore, Pakistan</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I love the serving adjuster and print features. Made the Warm Fudgy Brownies for my family party and everyone asked for the link."</p>
+        </div>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">👩</div>
+          <div class="testimonial-info">
+            <strong>Sarah D.</strong>
+            <small>Toronto, Canada</small>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="newsletter section">
-    <div><span class="eyebrow">WEEKLY INSPIRATION</span><h2>Fresh recipes, straight to your inbox.</h2><p>No spam. Just delicious ideas.</p></div>
-    <form id="newsletterForm"><input id="emailInput" type="email" placeholder="Your email address" required><button>Subscribe</button></form>
+    <div>
+      <span class="eyebrow">WEEKLY INSPIRATION</span>
+      <h2>Fresh recipes, straight to your inbox.</h2>
+      <p>No spam. Just delicious ideas, kitchen guides, and seasonal favorites.</p>
+    </div>
+    <form id="newsletterForm">
+      <input id="emailInput" type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
   <section class="about section" id="about">
     <div><span class="eyebrow">ABOUT FLAVORNEST</span><h2>Simple recipes.<br>Big flavors.</h2></div>
-    <div><p>FlavorNest is a clean, beginner-friendly recipe space for people who want great food without complicated instructions.</p><p>Save favorites, search by craving and open any recipe for ingredients and step-by-step instructions.</p></div>
+    <div>
+      <p>FlavorNest is a comprehensive culinary website built for home cooks who appreciate genuine flavor and clear, tested instructions.</p>
+      <p>Adjust servings, search by craving, bookmark favorites, and explore step-by-step cooking techniques designed for success in any kitchen.</p>
+    </div>
   </section>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <a class="brand" href="#home"><span>F</span> FlavorNest</a>
-    <p>Made for people who love to cook. ♥</p>
-    <div><a href="#home">Home</a><a href="#recipes">Recipes</a><a href="#categories">Categories</a><a href="#about">About</a></div>
+  <div class="footer-container">
+    <div class="footer-col">
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+      <p>FlavorNest is a premier culinary website and food blog dedicated to making home cooking approachable, vibrant, and delicious with tested recipes and expert kitchen guides.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📸</a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest">📌</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">▶️</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Website Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipe Index (60)</a></li>
+        <li><a href="articles.html">Culinary Guides</a></li>
+        <li><a href="about.html">About Kitchen Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy & Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Recipe Categories</h4>
+      <ul>
+        <li><a href="recipes.html?category=Pakistani">Pakistani Specials</a></li>
+        <li><a href="recipes.html?category=Chicken">Chicken Dishes</a></li>
+        <li><a href="recipes.html?category=Fast+Food">Fast Food Classics</a></li>
+        <li><a href="recipes.html?category=Dessert">Desserts & Sweets</a></li>
+        <li><a href="recipes.html?category=Breakfast">Breakfast & Brunch</a></li>
+        <li><a href="recipes.html?category=Healthy">Healthy & Salads</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Weekly Digest</h4>
+      <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
+      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+        <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
+        <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
+      </form>
+    </div>
   </div>
-  <small>© 2026 FlavorNest. All rights reserved.</small>
+  <div class="footer-bottom">
+    <span>© 2026 FlavorNest Website. All rights reserved. Crafted for food lovers worldwide.</span>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">Editorial Standards</a>
+      <a href="contact.html">Press & Inquiries</a>
+    </div>
+  </div>
 </footer>
 
 <div class="modal" id="recipeModal" aria-hidden="true">

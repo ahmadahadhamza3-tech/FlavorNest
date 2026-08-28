@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact FlavorNest - Get in touch with recipe questions, suggestions, or feedback.">
+  <title>Contact Us — FlavorNest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container {
+      max-width: 650px;
+      margin: 50px auto 80px;
+      padding: 0 20px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group textarea {
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--text);
+      padding: 12px 16px;
+      border-radius: 12px;
+      outline: 0;
+      font-family: inherit;
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .contact-btn {
+      border: 0;
+      background: var(--accent);
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .contact-btn:hover {
+      background: #c94922;
+    }
+  </style>
+</head>
+<body>
 
+<!-- Top Announcement Bar -->
+<div class="announcement-bar" id="announcementBar">
+  <span>✨ Inquire about culinary features, sponsorships, or recipe requests! <a href="recipes.html">View Recipes →</a></span>
+  <button class="announcement-close" id="closeAnnouncement" aria-label="Close notification">✕</button>
+</div>
+
+<!-- Top Left Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-hidden="true">
+  <div class="sidebar-header">
+    <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close sidebar">✕</button>
+  </div>
+
+  <div class="sidebar-search-box">
+    <span>⌕</span>
+    <input type="text" id="sidebarSearchInput" placeholder="Quick search recipes..." autocomplete="off">
+  </div>
+
+  <div class="sidebar-content">
+    <div class="sidebar-section-title">MAIN NAVIGATION</div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html" class="sidebar-link"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
+      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
+      <li><a href="contact.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
+      <li><a href="privacy.html" class="sidebar-link"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">BROWSE CATEGORIES</div>
+    <ul class="sidebar-menu">
+      <li><a href="recipes.html?category=Fast+Food" class="sidebar-link"><span class="sidebar-icon">🍔</span> <span>Fast Food</span> <small class="sidebar-subtext">Burgers & Wings</small></a></li>
+      <li><a href="recipes.html?category=Pakistani" class="sidebar-link"><span class="sidebar-icon">🍛</span> <span>Pakistani</span> <small class="sidebar-subtext">Biryani & Nihari</small></a></li>
+      <li><a href="recipes.html?category=Chicken" class="sidebar-link"><span class="sidebar-icon">🍗</span> <span>Chicken Specials</span> <small class="sidebar-subtext">Tikka & Karahi</small></a></li>
+      <li><a href="recipes.html?category=Dessert" class="sidebar-link"><span class="sidebar-icon">🍰</span> <span>Desserts & Sweets</span> <small class="sidebar-subtext">Gulab Jamun & Donuts</small></a></li>
+      <li><a href="recipes.html?category=Breakfast" class="sidebar-link"><span class="sidebar-icon">🥞</span> <span>Breakfast & Brunch</span> <small class="sidebar-subtext">Pancakes & Toast</small></a></li>
+      <li><a href="recipes.html?category=Healthy" class="sidebar-link"><span class="sidebar-icon">🥗</span> <span>Healthy & Salads</span> <small class="sidebar-subtext">Quinoa & Greens</small></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">DISCOVER & ACTIONS</div>
+    <ul class="sidebar-menu">
+      <li>
+        <button class="sidebar-action-btn" id="sidebarSurpriseBtn">
+          <span class="sidebar-icon">🎲</span> <span>Surprise Recipe</span>
+        </button>
+      </li>
+      <li>
+        <button class="sidebar-action-btn" id="sidebarThemeToggleBtn">
+          <span class="sidebar-icon" id="sidebarThemeIcon">☾</span> <span id="sidebarThemeLabel">Dark Mode</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <p>© 2026 FlavorNest • Made with ♥</p>
+  </div>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Open sidebar menu">☰</button>
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="articles.html">Culinary Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" style="color: var(--accent); font-weight: 700;">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="nav-actions">
+      <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="contact-container">
+    <div class="contact-card">
+      <div class="eyebrow">GET IN TOUCH</div>
+      <h1 style="font-family: 'Playfair Display', serif; font-size: 36px; margin: 10px 0 8px;">Contact Us</h1>
+      <p style="color: var(--muted); font-size: 15px;">Have questions about a recipe or want to suggest a new dish? We'd love to hear from you!</p>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required placeholder="Ahmad Hamza">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="your.email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" required placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+      <p>FlavorNest is a premier culinary website and food blog dedicated to making home cooking approachable, vibrant, and delicious with tested recipes and expert kitchen guides.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📸</a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest">📌</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">▶️</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Website Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipe Index (60)</a></li>
+        <li><a href="articles.html">Culinary Guides</a></li>
+        <li><a href="about.html">About Kitchen Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy & Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Recipe Categories</h4>
+      <ul>
+        <li><a href="recipes.html?category=Pakistani">Pakistani Specials</a></li>
+        <li><a href="recipes.html?category=Chicken">Chicken Dishes</a></li>
+        <li><a href="recipes.html?category=Fast+Food">Fast Food Classics</a></li>
+        <li><a href="recipes.html?category=Dessert">Desserts & Sweets</a></li>
+        <li><a href="recipes.html?category=Breakfast">Breakfast & Brunch</a></li>
+        <li><a href="recipes.html?category=Healthy">Healthy & Salads</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Weekly Digest</h4>
+      <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
+      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+        <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
+        <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FlavorNest Website. All rights reserved. Crafted for food lovers worldwide.</span>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">Editorial Standards</a>
+      <a href="contact.html">Press & Inquiries</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.onsubmit = (e) => {
+      e.preventDefault();
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      showToast("Message sent! We'll reply soon. ♥");
+    };
+  }
+</script>
+</body>
+</html>

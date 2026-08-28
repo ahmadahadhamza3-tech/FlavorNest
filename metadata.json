@@ -1,0 +1,6 @@
+{
+  "name": "FlavorNest",
+  "description": "A premier culinary website and recipe publication featuring 60+ chef-tested recipes, kitchen tips, cooking guides, categories, and meal inspiration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

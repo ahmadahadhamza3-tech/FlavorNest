@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for FlavorNest.">
+  <title>Privacy Policy — FlavorNest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-content {
+      max-width: 800px;
+      margin: 50px auto 80px;
+      padding: 0 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .legal-content h1 {
+      font-family: "Playfair Display", serif;
+      color: var(--text);
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+    .legal-content h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--text);
+      font-size: 24px;
+      margin: 32px 0 12px;
+    }
+    .legal-content p {
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
 
+<!-- Top Announcement Bar -->
+<div class="announcement-bar" id="announcementBar">
+  <span>✨ Learn about our commitment to editorial excellence and data protection. <a href="about.html">About Us →</a></span>
+  <button class="announcement-close" id="closeAnnouncement" aria-label="Close notification">✕</button>
+</div>
+
+<!-- Top Left Sidebar Drawer -->
+<aside class="sidebar-drawer" id="sidebarDrawer" aria-hidden="true">
+  <div class="sidebar-header">
+    <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    <button class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close sidebar">✕</button>
+  </div>
+
+  <div class="sidebar-search-box">
+    <span>⌕</span>
+    <input type="text" id="sidebarSearchInput" placeholder="Quick search recipes..." autocomplete="off">
+  </div>
+
+  <div class="sidebar-content">
+    <div class="sidebar-section-title">MAIN NAVIGATION</div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html" class="sidebar-link"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
+      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
+      <li><a href="contact.html" class="sidebar-link"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
+      <li><a href="privacy.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">BROWSE CATEGORIES</div>
+    <ul class="sidebar-menu">
+      <li><a href="recipes.html?category=Fast+Food" class="sidebar-link"><span class="sidebar-icon">🍔</span> <span>Fast Food</span> <small class="sidebar-subtext">Burgers & Wings</small></a></li>
+      <li><a href="recipes.html?category=Pakistani" class="sidebar-link"><span class="sidebar-icon">🍛</span> <span>Pakistani</span> <small class="sidebar-subtext">Biryani & Nihari</small></a></li>
+      <li><a href="recipes.html?category=Chicken" class="sidebar-link"><span class="sidebar-icon">🍗</span> <span>Chicken Specials</span> <small class="sidebar-subtext">Tikka & Karahi</small></a></li>
+      <li><a href="recipes.html?category=Dessert" class="sidebar-link"><span class="sidebar-icon">🍰</span> <span>Desserts & Sweets</span> <small class="sidebar-subtext">Gulab Jamun & Donuts</small></a></li>
+      <li><a href="recipes.html?category=Breakfast" class="sidebar-link"><span class="sidebar-icon">🥞</span> <span>Breakfast & Brunch</span> <small class="sidebar-subtext">Pancakes & Toast</small></a></li>
+      <li><a href="recipes.html?category=Healthy" class="sidebar-link"><span class="sidebar-icon">🥗</span> <span>Healthy & Salads</span> <small class="sidebar-subtext">Quinoa & Greens</small></a></li>
+    </ul>
+
+    <div class="sidebar-section-title">DISCOVER & ACTIONS</div>
+    <ul class="sidebar-menu">
+      <li>
+        <button class="sidebar-action-btn" id="sidebarSurpriseBtn">
+          <span class="sidebar-icon">🎲</span> <span>Surprise Recipe</span>
+        </button>
+      </li>
+      <li>
+        <button class="sidebar-action-btn" id="sidebarThemeToggleBtn">
+          <span class="sidebar-icon" id="sidebarThemeIcon">☾</span> <span id="sidebarThemeLabel">Dark Mode</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-footer">
+    <p>© 2026 FlavorNest • Made with ♥</p>
+  </div>
+</aside>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <button class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Open sidebar menu">☰</button>
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="articles.html">Culinary Guides</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html" style="color: var(--accent); font-weight: 700;">Privacy Policy</a>
+    </div>
+    <div class="nav-actions">
+      <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main class="legal-content">
+  <div class="eyebrow">LEGAL & ETHICS</div>
+  <h1>Privacy Policy</h1>
+  <p>Last updated: 2026</p>
+
+  <p>At FlavorNest, your privacy is important to us. This Privacy Policy explains how we handle your information when you visit our website.</p>
+
+  <h2>Information We Collect</h2>
+  <p>We do not collect personal identifying information unless you voluntarily submit it (for example, when subscribing to our newsletter or using our contact form). Local settings such as your light/dark theme preference and bookmarked recipes are stored solely on your device via standard browser local storage.</p>
+
+  <h2>Cookies & Third-Party Services</h2>
+  <p>We may use standard web analytics and font providers (such as Google Fonts) to improve the reading and cooking experience. No sensitive personal data is shared or sold to third parties.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions regarding our privacy practices, feel free to contact us through our Contact page.</p>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <a class="brand" href="index.html"><span>F</span> FlavorNest</a>
+      <p>FlavorNest is a premier culinary website and food blog dedicated to making home cooking approachable, vibrant, and delicious with tested recipes and expert kitchen guides.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📸</a>
+        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Pinterest">📌</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">▶️</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">🐦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Website Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipe Index (60)</a></li>
+        <li><a href="articles.html">Culinary Guides</a></li>
+        <li><a href="about.html">About Kitchen Team</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy & Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Recipe Categories</h4>
+      <ul>
+        <li><a href="recipes.html?category=Pakistani">Pakistani Specials</a></li>
+        <li><a href="recipes.html?category=Chicken">Chicken Dishes</a></li>
+        <li><a href="recipes.html?category=Fast+Food">Fast Food Classics</a></li>
+        <li><a href="recipes.html?category=Dessert">Desserts & Sweets</a></li>
+        <li><a href="recipes.html?category=Breakfast">Breakfast & Brunch</a></li>
+        <li><a href="recipes.html?category=Healthy">Healthy & Salads</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Weekly Digest</h4>
+      <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
+      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+        <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
+        <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FlavorNest Website. All rights reserved. Crafted for food lovers worldwide.</span>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">Editorial Standards</a>
+      <a href="contact.html">Press & Inquiries</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
