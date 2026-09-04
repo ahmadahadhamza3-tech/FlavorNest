@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FlavorNest - A premier culinary website featuring 60+ chef-crafted recipes, cooking guides, categories, and culinary inspiration.">
+  <meta name="description" content="FlavorNest - A premier culinary website featuring 75+ chef-crafted recipes, cooking guides, categories, and culinary inspiration.">
   <meta property="og:title" content="FlavorNest — Culinary Recipes & Kitchen Inspiration">
   <meta property="og:description" content="Explore chef-tested recipes, kitchen tips, and easy weeknight meals across Pakistani, Chicken, Fast Food, and Desserts.">
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 
 <!-- Top Announcement Bar -->
 <div class="announcement-bar" id="announcementBar">
-  <span>✨ Discover 60+ chef-tested recipes & culinary techniques! <a href="recipes.html">Explore Catalog →</a></span>
+  <span>✨ Discover 75+ chef-tested recipes & culinary techniques! <a href="recipes.html">Explore Catalog →</a></span>
   <button class="announcement-close" id="closeAnnouncement" aria-label="Close notification">✕</button>
 </div>
 
@@ -37,8 +37,8 @@
     <div class="sidebar-section-title">MAIN NAVIGATION</div>
     <ul class="sidebar-menu">
       <li><a href="index.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
-      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
-      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">78</span></a></li>
+      <li><a href="#culinaryGuides" class="sidebar-link" onclick="closeSidebar()"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
       <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
       <li><a href="contact.html" class="sidebar-link"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
       <li><a href="privacy.html" class="sidebar-link"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
@@ -84,14 +84,10 @@
     <div class="nav-links" id="navLinks">
       <a href="index.html" style="color: var(--accent); font-weight: 700;">Home</a>
       <a href="recipes.html">Recipes</a>
-      <a href="articles.html">Culinary Guides</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="#culinaryGuides">Culinary Guides</a>
     </div>
     <div class="nav-actions">
       <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </nav>
 </header>
@@ -101,7 +97,7 @@
     <div class="hero-copy">
       <div class="eyebrow">CHEF-CRAFTED RECIPES & FOOD STORIES</div>
       <h1>Cook something<br><em>delicious</em> today.</h1>
-      <p>FlavorNest is your trusted culinary website with 60+ easy, flavorful recipes made for busy weeknights, family feasts, and dessert lovers.</p>
+      <p>FlavorNest is your trusted culinary website with 75+ easy, flavorful recipes made for busy weeknights, family feasts, and dessert lovers.</p>
       <div class="hero-search">
         <span>⌕</span>
         <input id="searchInput" type="search" placeholder="Search biryani, pizza, kheer, tacos..." autocomplete="off">
@@ -127,7 +123,7 @@
           <span class="heart">♥</span>
         </div>
       </div>
-      <div class="hero-sticker">60+<small>curated recipes</small></div>
+      <div class="hero-sticker">75+<small>curated recipes</small></div>
     </div>
   </section>
 
@@ -148,9 +144,14 @@
   <section class="section" id="recipes">
     <div class="section-head row">
       <div><span class="eyebrow">OUR FAVORITES</span><h2>Popular & Trending Recipes</h2></div>
-      <a href="recipes.html" class="text-btn" id="viewAllRecipes">View full catalog (60) →</a>
+      <a href="recipes.html" class="text-btn" id="viewAllRecipes">View full catalog (78) →</a>
     </div>
-    <div class="recipe-grid" id="recipeGrid"></div>
+    <div class="recipe-grid" id="recipeGrid" data-limit="8"></div>
+    <div style="text-align: center; margin-top: 42px;">
+      <a href="recipes.html" class="primary" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; padding: 14px 30px; font-size: 15px; font-weight: 700; border-radius: 12px; box-shadow: 0 8px 24px rgba(224,86,36,.22);">
+        <span>Explore All 75+ Recipes</span> <span style="font-size: 18px;">→</span>
+      </a>
+    </div>
   </section>
 
   <section class="featured section">
@@ -167,14 +168,14 @@
     </div>
   </section>
 
-  <!-- Culinary Guides & Articles Preview -->
+  <!-- Culinary Guides & Articles -->
   <section class="section" id="culinaryGuides">
     <div class="section-head row">
       <div>
         <span class="eyebrow">KITCHEN KNOWLEDGE</span>
-        <h2>Culinary Guides & Kitchen Tips</h2>
+        <h2>Culinary Guides &amp; Kitchen Tips</h2>
       </div>
-      <a href="articles.html" class="text-btn">Read all guides →</a>
+      <span style="color: var(--muted); font-size: 14px; font-weight: 600;">6 Expert Cooking Guides</span>
     </div>
     <div class="articles-grid">
       <article class="article-card">
@@ -183,7 +184,7 @@
           <span class="article-tag">Techniques</span>
         </div>
         <div class="article-body">
-          <h3>The Master Guide to South Asian Spices & Aromatics</h3>
+          <h3>The Master Guide to South Asian Spices &amp; Aromatics</h3>
           <p>Learn when to bloom whole seeds in hot ghee (Tarka) versus when to add slow-roasted ground masalas for deeply nuanced curries.</p>
           <div class="article-meta">
             <span class="author-avatar">👩‍🍳</span>
@@ -194,7 +195,7 @@
 
       <article class="article-card">
         <div class="article-photo">
-          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
           <span class="article-tag">Crispy Mastery</span>
         </div>
         <div class="article-body">
@@ -213,11 +214,56 @@
           <span class="article-tag">Breakfast Science</span>
         </div>
         <div class="article-body">
-          <h3>The Art of the Flawless Poached Egg for Benedict & Shakshuka</h3>
+          <h3>The Art of the Flawless Poached Egg for Benedict &amp; Shakshuka</h3>
           <p>A gentle vinegar whirlpool and fresh farm eggs ensure tender, velvet whites that cradle a golden runny yolk every single time.</p>
           <div class="article-meta">
             <span class="author-avatar">👩‍🍳</span>
             <span>Chef Maria • 5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Dough and baking">
+          <span class="article-tag">Baking</span>
+        </div>
+        <div class="article-body">
+          <h3>Understanding Yeast &amp; Fermentation for Fluffy Breads</h3>
+          <p>How temperature, hydration ratios, and patience turn simple flour into pillowy brioche, naan, and artisan pizza crusts.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👨‍🍳</span>
+            <span>Baker Tariq • 7 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" alt="Slow cooking">
+          <span class="article-tag">Slow Cooking</span>
+        </div>
+        <div class="article-body">
+          <h3>The Science of Dum Cooking: Sealing Steam &amp; Flavors</h3>
+          <p>Discover the ancient technique of slow-trapping steam in heavy vessels to tenderize meats and infuse aromatic grains.</p>
+          <div class="article-meta">
+            <span class="author-avatar">👩‍🍳</span>
+            <span>Chef Ayesha • 5 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-photo">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85" alt="Healthy salads">
+          <span class="article-tag">Healthy Living</span>
+        </div>
+        <div class="article-body">
+          <h3>Building Balanced Power Bowls that Keep You Energized</h3>
+          <p>A simple 4-part framework: grains, roasted protein, hearty greens, and emulsified acid dressings for vibrant weekday lunches.</p>
+          <div class="article-meta">
+            <span class="author-avatar">🥗</span>
+            <span>Nutritionist Sana • 4 min read</span>
           </div>
         </div>
       </article>
@@ -312,8 +358,8 @@
       <h4>Website Links</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipe Index (60)</a></li>
-        <li><a href="articles.html">Culinary Guides</a></li>
+        <li><a href="recipes.html">Recipe Index (78)</a></li>
+        <li><a href="#culinaryGuides">Culinary Guides</a></li>
         <li><a href="about.html">About Kitchen Team</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="privacy.html">Privacy & Policy</a></li>
@@ -333,7 +379,7 @@
     <div class="footer-col">
       <h4>Weekly Digest</h4>
       <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
-      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+      <form onsubmit="handleNewsletterSubmission(event, this);" style="display:flex; margin-top: 10px;">
         <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
         <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
       </form>

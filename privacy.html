@@ -58,8 +58,8 @@
     <div class="sidebar-section-title">MAIN NAVIGATION</div>
     <ul class="sidebar-menu">
       <li><a href="index.html" class="sidebar-link"><span class="sidebar-icon">🏠</span> <span>Home</span></a></li>
-      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">60</span></a></li>
-      <li><a href="articles.html" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
+      <li><a href="recipes.html" class="sidebar-link"><span class="sidebar-icon">📖</span> <span>All Recipes</span> <span class="sidebar-badge">78</span></a></li>
+      <li><a href="index.html#culinaryGuides" class="sidebar-link"><span class="sidebar-icon">✍️</span> <span>Culinary Guides</span></a></li>
       <li><a href="about.html" class="sidebar-link"><span class="sidebar-icon">👨‍🍳</span> <span>About Us</span></a></li>
       <li><a href="contact.html" class="sidebar-link"><span class="sidebar-icon">✉️</span> <span>Contact Us</span></a></li>
       <li><a href="privacy.html" class="sidebar-link" style="color: var(--accent); font-weight: 700;"><span class="sidebar-icon">🛡️</span> <span>Privacy Policy</span></a></li>
@@ -106,13 +106,9 @@
       <a href="index.html">Home</a>
       <a href="recipes.html">Recipes</a>
       <a href="articles.html">Culinary Guides</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="privacy.html" style="color: var(--accent); font-weight: 700;">Privacy Policy</a>
     </div>
     <div class="nav-actions">
       <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </nav>
 </header>
@@ -150,8 +146,8 @@
       <h4>Website Links</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipe Index (60)</a></li>
-        <li><a href="articles.html">Culinary Guides</a></li>
+        <li><a href="recipes.html">Recipe Index (78)</a></li>
+        <li><a href="index.html#culinaryGuides">Culinary Guides</a></li>
         <li><a href="about.html">About Kitchen Team</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="privacy.html">Privacy & Policy</a></li>
@@ -171,7 +167,7 @@
     <div class="footer-col">
       <h4>Weekly Digest</h4>
       <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
-      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+      <form onsubmit="handleNewsletterSubmission(event, this);" style="display:flex; margin-top: 10px;">
         <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
         <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
       </form>

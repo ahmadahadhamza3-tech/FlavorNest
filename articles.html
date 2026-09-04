@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=index.html#culinaryGuides">
+  <script>window.location.replace("index.html#culinaryGuides");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FlavorNest Culinary Guides - Expert kitchen tips, secret spice pairings, and food stories.">
   <title>Culinary Guides & Kitchen Tips — FlavorNest</title>
@@ -82,13 +84,9 @@
       <a href="index.html">Home</a>
       <a href="recipes.html">Recipes</a>
       <a href="articles.html" style="color: var(--accent); font-weight: 700;">Culinary Guides</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="privacy.html">Privacy Policy</a>
     </div>
     <div class="nav-actions">
       <button class="round-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
   </nav>
 </header>
@@ -121,7 +119,7 @@
 
       <article class="article-card">
         <div class="article-photo">
-          <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="Crispy fries">
           <span class="article-tag">Crispy Mastery</span>
         </div>
         <div class="article-body">
@@ -246,7 +244,7 @@
     <div class="footer-col">
       <h4>Weekly Digest</h4>
       <p>Subscribe to our weekly recipe magazine for seasonal recipes and kitchen hacks.</p>
-      <form onsubmit="event.preventDefault(); showToast('Subscribed! Welcome to the culinary family. ♥'); this.reset();" style="display:flex; margin-top: 10px;">
+      <form onsubmit="handleNewsletterSubmission(event, this);" style="display:flex; margin-top: 10px;">
         <input type="email" placeholder="Your email..." required style="flex:1; border:1px solid #3a322b; background:#221d19; color:#fff; padding:10px 12px; border-radius:10px 0 0 10px; outline:0; font-size:13px;">
         <button type="submit" style="background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:0 10px 10px 0; font-weight:700;">Join</button>
       </form>
